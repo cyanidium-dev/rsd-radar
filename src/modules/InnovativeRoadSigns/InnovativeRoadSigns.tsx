@@ -6,7 +6,7 @@ import { easeOutAnimation } from "@/shared/utils/animation";
 
 const InnovativeRoadSigns = () => {
   return (
-    <section className="bg-white">
+    <section id='about-us' className="bg-white">
       <div className="container px-6 md:px-8 mx-auto pt-[128px] pb-[50px] xl:pl-[150px] xxl:pr-[180px] bg-white">
         <div className="xxl:flex xxl:justify-between xxl:items-center">
           <div className="xxl:flex xxl:flex-col">

@@ -13,7 +13,7 @@ const RadarsModels = () => {
   const router = useRouter();
 
   return (
-    <section className="models-bg">
+    <section id="productions" className="models-bg">
       <div className="container mx-auto px-6 pt-[109px] xl:px-[150px] xl:py-[120px]">
         <div className="xl:flex xl:flex-row-reverse xl:justify-between xl:items-center">
           <div>

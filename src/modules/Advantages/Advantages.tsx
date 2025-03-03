@@ -5,7 +5,10 @@ import { easeOutAnimation } from "@/shared/utils/animation";
 
 const Advantages = () => {
   return (
-    <section className="container mx-auto px-6 py-[87px] md:px-8 lg:px-12 xl:pl-[96px] xxl:pr-[220px] xl:pt-[180px]">
+    <section
+      id="advantages"
+      className="container mx-auto px-6 py-[87px] md:px-8 lg:px-12 xl:pl-[96px] xxl:pr-[220px] xl:pt-[180px]"
+    >
       <div className="border-l border-[#A1A1AA] pl-[18px] md:pl-[24px] xl:pl-[54px] sm:py-[5px]">
         <motion.h2
           custom={0}

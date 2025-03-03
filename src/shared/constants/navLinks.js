@@ -1,6 +1,6 @@
 export const navLinks = [
-  { name: "Наші переваги", href: "/" },
-  { name: "Про нас", href: "/" },
-  { name: "Продукція", href: "/" },
-  { name: "Напрямки", href: "/" },
+  { name: "Наші переваги", href: "/#advantages" },
+  { name: "Про нас", href: "/#about-us" },
+  { name: "Продукція", href: "/#productions" },
+  { name: "Напрямки", href: "/#directions" },
 ];

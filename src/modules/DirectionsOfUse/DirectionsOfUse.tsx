@@ -9,7 +9,7 @@ import { easeOutAnimation } from "@/shared/utils/animation";
 
 const DirectionsOfUse = () => {
   return (
-    <section className="bg-white">
+    <section id="directions" className="bg-white">
       <div className="container mx-auto sm:px-4 md:px-3 lg:px-6 px-6 pt-[128px] pb-[64px] xl:px-[150px]">
         <div className="flex xxl:hidden flex-col sm:flex-row sm:items-center xxl:flex-row-reverse">
           {/* Текстові блоки */}
