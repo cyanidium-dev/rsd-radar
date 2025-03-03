@@ -77,7 +77,7 @@ const ContactForm = ({
           className={inputClasses}
         />
         {errors.name && (
-          <p className="text-red-500  text-sm mt-1">{errors.name.message}</p>
+          <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
         )}
 
         <InputMask

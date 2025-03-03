@@ -15,7 +15,9 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const currentRadar = radarItems.find((radar) => radar.slug === slug);
-
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <section className="bg-white">
       <div className="radar-bg_hero pt-[86px] pb-[93px] md:py-[53px]">
@@ -42,7 +44,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
           viewport={{ once: true }}
           className="sm:flex sm:justify-between sm:items-start"
         >
-          <div className="flex flex-col gap-[14px]">
+          <div className="flex flex-col gap-[14px] xl:max-w-[497px] xxl:max-w-[609px]">
             <motion.p
               custom={0}
               variants={easeOutAnimation}
@@ -69,7 +71,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex justify-between"
+              className="flex justify-between "
             >
               <p className="text-[20px] xl:text-[24px] text-dark">
                 Вироблено в Україні
@@ -94,7 +96,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
             >
               <Button
                 onClick={() => setIsModalOpen(true)}
-                className="h-[40px] max-w-[235px] mt-[14px]"
+                className="h-[40px] w-[235px] mt-[14px]"
                 text="Замовити"
               />
             </motion.div>
@@ -193,8 +195,9 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
               В комплект входять стандартні монтажні кріплення. ЕмОніК легко
               встановлюється на існуючі стовпи (наприклад, освітлення або
               електромережі) за допомогою стандартних монтажних кріплень. Для
-              підключення достатньо під&apos;єднати пристрій до постійного джерела
-              електроживлення (з підключенням до мережі або через розетку).
+              підключення достатньо під&apos;єднати пристрій до постійного
+              джерела електроживлення (з підключенням до мережі або через
+              розетку).
             </motion.p>
           </div>
         </motion.div>
@@ -249,10 +252,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
           </div>
         </motion.div>
       </div>
-      <ContactsModal
-        isModalOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
+      <ContactsModal isModalOpen={isModalOpen} onClose={handleCloseModal} />
     </section>
   );
 }
