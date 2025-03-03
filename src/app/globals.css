@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+.hero-bg {
+  background-image: url("../../public/images/hero-mob.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (min-width: 480px) {
+    background-image: url("../../public/images/hero-desk.jpg");
+  }
+}
+
+.models-bg {
+  background: linear-gradient(180deg, #000 0%, #191a1d 67.04%);
+  @media (min-width: 1366px) {
+    background-image: url("../../public/images/models-bg-desk.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.contacts-bg_first {
+  background-image: url("../../public/images/contact-mob1.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (min-width: 768px) {
+    background-image: url("../../public/images/contact-desk1.jpg");
+  }
+}
+
+.contacts-bg_second {
+  background-image: url("../../public/images/contact-mob2.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (min-width: 768px) {
+    background-image: url("../../public/images/contact-desk2.jpg");
+  }
+}
+@layer utilities {
+  .logo {
+    @apply text-[14px] font-bold leading-normal tracking-[7px] uppercase xl:text-[20px];
+  }
+
+  .btn-primary {
+    @apply px-4 rounded-[4px]  text-[14px] leading-[20px];
+    @apply hover:bg-opacity-90 hover:shadow-lg;
+    @apply active:scale-95 active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)];
+    @apply transition-all duration-200;
+  }
+
+  .btn-shadow {
+    @apply shadow-[inset_0_-3px_4px_rgba(255,255,255,0.22),inset_0_4px_7.4px_rgba(0,0,0,0.25)];
+  }
+}
