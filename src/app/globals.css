@@ -31,51 +31,97 @@ input:focus-visible {
 }
 
 .hero-bg {
-  background-image: url("../../public/images/hero-mob.jpg");
+  background-image: url("../../public/images/hero/hero-mob.jpg");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   @media (min-width: 480px) {
-    background-image: url("../../public/images/hero-desk.jpg");
+    background-image: url("../../public/images/hero/hero-480.jpg");
+  }
+  @media (min-width: 640px) {
+    background-image: url("../../public/images/hero/hero-640.jpg");
+  }
+  @media (min-width: 768px) {
+    background-image: url("../../public/images/hero/hero-768.jpg");
+  }
+  @media (min-width: 1024px) {
+    background-image: url("../../public/images/hero/hero-desk.jpg");
   }
 }
 
 .models-bg {
   background: linear-gradient(180deg, #000 0%, #191a1d 67.04%);
   @media (min-width: 1366px) {
-    background-image: url("../../public/images/models-bg-desk.jpg");
+    background-image: url("../../public/images/models/models-bg-desk.jpg");
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
   }
 }
-
-.contacts-bg_first {
-  background-image: url("../../public/images/contact-mob1.jpg");
+.models-bg_mob {
+  background-image: url("../../public/images/models/models-480.jpg");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
+  @media (min-width: 640px) {
+    background-image: url("../../public/images/models/models-640.jpg");
+  }
   @media (min-width: 768px) {
-    background-image: url("../../public/images/contact-desk1.jpg");
+    background-image: url("../../public/images/models/models-768.jpg");
+  }
+}
+
+.contacts-bg_first {
+  background-image: url("../../public/images/top-contacts/contact-mob1.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (min-width: 480px) {
+    background-image: url("../../public/images/top-contacts/contact-480.jpg");
+  }
+  @media (min-width: 640px) {
+    background-image: url("../../public/images/top-contacts/contact-640.jpg");
+  }
+  @media (min-width: 768px) {
+    background-image: url("../../public/images/top-contacts/contact-768.jpg");
+  }
+  @media (min-width: 1024px) {
+    background-image: url("../../public/images/top-contacts/contact-desk1.jpg");
   }
 }
 
 .contacts-bg_second {
-  background-image: url("../../public/images/contact-mob2.jpg");
+  background-image: url("../../public/images/bot-contacts/contact-mob2.jpg");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
+  @media (min-width: 480px) {
+    background-image: url("../../public/images/bot-contacts/bg-480.jpg");
+  }
   @media (min-width: 768px) {
-    background-image: url("../../public/images/contact-desk2.jpg");
+    background-image: url("../../public/images/bot-contacts/bg-768.jpg");
+  }
+  @media (min-width: 1024px) {
+    background-image: url("../../public/images/bot-contacts/contact-desk2.jpg");
   }
 }
+
 .radar-bg_hero {
-  background-image: url("../../public/images/radar-page-hero-mob.jpg");
+  background-image: url("../../public/images/radar-page/bg-mob.jpg");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  @media (min-width: 768px) {
-    background-image: url("../../public/images/radar-page-hero-desk.jpg");
+  @media (min-width: 480px) {
+    background-image: url("../../public/images/radar-page/bg-480.jpg");
+  }
+  @media (min-width: 640px) {
+    background-image: url("../../public/images/radar-page/bg-640.jpg");
+  }
+  @media (min-width: 768) {
+    background-image: url("../../public/images/radar-page/bg-768.jpg");
+  }
+  @media (min-width: 1024) {
+    background-image: url("../../public/images/radar-page/bg-desk.jpg");
   }
 }
 @layer utilities {

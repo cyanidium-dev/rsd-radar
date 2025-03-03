@@ -17,10 +17,10 @@ const DirectionOfUseDesktop = () => {
         viewport={{ once: true }}
       >
         <Image
-          src="/images/radar-desk.png"
+          src="/images/directions/radar-desk.png"
           alt="Radar"
-          width={508}
-          height={622}
+          width={398}
+          height={916}
         />
       </motion.div>
       <div className="ml-[65px]">
@@ -65,7 +65,7 @@ const DirectionOfUseDesktop = () => {
           />
         </motion.div>
       </div>
-      <div className="ml-[130px]">
+      <div className="ml-auto">
         <div className="flex gap-[92px]">
           <motion.div
             custom={4}
@@ -75,8 +75,8 @@ const DirectionOfUseDesktop = () => {
             viewport={{ once: true }}
           >
             <DirectionItem
-              titleClassName="w-[170px]"
-              textClassName="w-[170px]"
+              titleClassName="w-[270px]"
+              textClassName="w-[270px]"
               title={directionData[1].title}
               text={directionData[1].text}
             />
@@ -89,14 +89,14 @@ const DirectionOfUseDesktop = () => {
             viewport={{ once: true }}
           >
             <DirectionItem
-              titleClassName="w-[167px]"
-              textClassName="w-[199px]"
+              titleClassName="w-[300px]"
+              textClassName="w-[300px]"
               title={directionData[2].title}
               text={directionData[2].text}
             />
           </motion.div>
         </div>
-        <div className="flex gap-[42px] mt-[60px]">
+        <div className="flex gap-[42px] mt-[60px] justify-between">
           <motion.div
             custom={6}
             variants={easeOutAnimation}
@@ -105,8 +105,8 @@ const DirectionOfUseDesktop = () => {
             viewport={{ once: true }}
           >
             <DirectionItem
-              titleClassName="w-[221px]"
-              textClassName="w-[220px]"
+              titleClassName="w-[270px]"
+              textClassName="w-[270px]"
               title={directionData[3].title}
               text={directionData[3].text}
             />
@@ -119,8 +119,8 @@ const DirectionOfUseDesktop = () => {
             viewport={{ once: true }}
           >
             <DirectionItem
-              titleClassName="w-[183px]"
-              textClassName="w-[199px]"
+              titleClassName="w-[300px]"
+              textClassName="w-[300px]"
               title={directionData[4].title}
               text={directionData[4].text}
             />

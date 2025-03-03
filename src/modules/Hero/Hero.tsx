@@ -2,25 +2,25 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { easeOutAnimation } from '@/shared/utils/animation';
+import { easeOutAnimation } from "@/shared/utils/animation";
 
 const Hero = () => {
   return (
     <section className="px-[42px] pt-[84px] pb-[111px] hero-bg xl:pb-[28px] xl:pt-[77px]">
       <div className="flex flex-col justify-center items-center">
         <Image
-          src="/images/radar-second-mob.png"
+          src="/images/hero/radar-mob.png"
           alt="Radar"
-          width={209}
-          height={289}
+          width={139}
+          height={285}
           className="xl:hidden"
         />
         <Image
           alt="Radar"
           className="hidden xl:block"
-          src="/images/radar-hero-desk.png"
-          width={398}
-          height={560}
+          src="/images/hero/radar-desk.png"
+          width={253}
+          height={522}
         />
 
         <motion.h1

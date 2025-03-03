@@ -122,10 +122,10 @@ const DirectionsOfUse = () => {
               viewport={{ once: true }}
             >
               <Image
-                src="/images/radar-mob.png"
+                src="/images/directions/radar-mob.png"
                 alt="Radar"
-                width={311}
-                height={381}
+                width={181}
+                height={419}
                 className="w-full xl:hidden h-auto object-contain"
               />
             </motion.div>
@@ -137,10 +137,10 @@ const DirectionsOfUse = () => {
               viewport={{ once: true }}
             >
               <Image
-                src="/images/radar-desk.png"
+                src="/images/directions/radar-desk.png"
                 alt="Radar"
-                width={508}
-                height={622}
+                width={398}
+                height={916}
                 className="w-full hidden xl:block h-auto object-contain xxl:w-[508px] xxl:h-[622px]"
               />
             </motion.div>

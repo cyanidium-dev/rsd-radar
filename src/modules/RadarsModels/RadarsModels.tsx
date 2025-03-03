@@ -58,31 +58,32 @@ const RadarsModels = () => {
             viewport={{ once: true }}
           >
             <Image
-              src="/images/radar-second-mob.png"
+              src="/images/models/radar-desk.png"
               alt="Radar"
-              width={283}
-              height={398}
-              className="mx-auto mt-[136px] xl:hidden"
-            />
-          </motion.div>
-
-          <motion.div
-            custom={3.6}
-            variants={easeOutAnimation}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <Image
-              src="/images/radar-second-desk.png"
-              alt="Radar"
-              width={546}
-              height={769}
+              width={420}
+              height={863}
               className="hidden xl:block xl:w-[382px] xl:h-[538px] xxl:h-[769px] xxl:w-[546px]"
             />
           </motion.div>
         </div>
       </div>
+
+      <motion.div
+        custom={3.6}
+        variants={easeOutAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="models-bg_mob pt-[240px] pb-[120px] mt-[-85px] xl:hidden"
+      >
+        <Image
+          src="/images/models/radar-mob.png"
+          alt="Radar"
+          width={229}
+          height={470}
+          className="mx-auto  xl:hidden"
+        />
+      </motion.div>
       {isModalOpen && (
         <ContactsModal
           isModalOpen={isModalOpen}

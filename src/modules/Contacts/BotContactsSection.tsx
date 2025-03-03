@@ -7,7 +7,7 @@ import { easeOutAnimation } from "@/shared/utils/animation";
 const BotContactsSection = () => {
   return (
     <section className="contacts-bg_second pt-[192px] pb-[60px]">
-      <div className="container px-[32px] mx-auto xl:px-[150px]">
+      <div className="container px-[32px] mx-auto xl:pl-[150px] xxl:pr-[226px]">
         <div className="md:flex md:items-center md:justify-between">
           <div className="bg-white py-[26px] px-[26px] xl:px-[95px] xl:py-[65px] rounded-[12px] max-w-[420px] xl:max-w-[653px] xl:mx-0 xl:mr-auto md:mx-0 mx-auto">
             <motion.h2
@@ -49,12 +49,13 @@ const BotContactsSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
+            className="md:ml-auto"
           >
             <Image
-              src="/images/radar-second-mob.png"
+              src="/images/bot-contacts/radar-mob.png"
               alt="Radar"
-              width={264}
-              height={371}
+              width={200}
+              height={398}
               className="xl:hidden mx-auto mt-[73px] md:mt-0 md:mx-0"
             />
           </motion.div>
@@ -66,10 +67,10 @@ const BotContactsSection = () => {
             viewport={{ once: true }}
           >
             <Image
-              src="/images/radar-second-desk.png"
+              src="/images/bot-contacts/radar-desk.png"
               alt="Radar"
-              width={346}
-              height={469}
+              width={372}
+              height={741}
               className="hidden xl:block"
             />
           </motion.div>

@@ -22,14 +22,14 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
     <section className="bg-white">
       <div className="radar-bg_hero pt-[86px] pb-[93px] md:py-[53px]">
         <Image
-          src="/images/radar-page_radar-mob.png"
+          src="/images/radar-page/radar-mob.png"
           alt="Radar"
           width={187}
           height={381}
           className="mx-auto md:hidden"
         />
         <Image
-          src="/images/radar-page_radar-desk.png"
+          src="/images/radar-page/radar-desk.png"
           alt="Radar"
           width={359}
           height={747}
