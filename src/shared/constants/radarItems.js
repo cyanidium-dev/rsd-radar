@@ -1,6 +1,4 @@
-import { RadarItem } from "../types";
-
-export const radarItems: RadarItem[] = [
+export const radarItems = [
   {
     title: "RSD Radar Плюс",
     subtitle:

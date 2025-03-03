@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { easeOutAnimation } from '@/shared/utils/animation';
 
 const Hero = () => {
   return (
@@ -20,15 +22,36 @@ const Hero = () => {
           width={398}
           height={560}
         />
-        <h1 className="mt-[31px] text-white  text-[36px] font-extrabold leading-[150%] text-center tracking-[4.12px] uppercase xl:text-[64px] xl:mt-[82px]">
+
+        <motion.h1
+          custom={0}
+          variants={easeOutAnimation}
+          initial="hidden"
+          animate="visible"
+          className="mt-[31px] text-white text-[36px] font-extrabold leading-[150%] text-center tracking-[4.12px] uppercase xl:text-[64px] xl:mt-[82px]"
+        >
           RSD Radar
-        </h1>
-        <h2 className="mt-[10px] text-center text-white leading-[150%] tracking-[5.12px] self-stretch font-medium text-[16px] uppercase xl:text-[24px] ">
+        </motion.h1>
+
+        <motion.h2
+          custom={1}
+          variants={easeOutAnimation}
+          initial="hidden"
+          animate="visible"
+          className="mt-[10px] text-center text-white leading-[150%] tracking-[5.12px] self-stretch font-medium text-[16px] uppercase xl:text-[24px]"
+        >
           Road Safety device
-        </h2>
-        <p className="text-white text-center mx-auto text-[16px] mt-[31px] leading-[122%] tracking-[1.2px] max-w-[238px] self-stretch xl:text-[24px] xl:max-w-[642px]">
+        </motion.h2>
+
+        <motion.p
+          custom={2}
+          variants={easeOutAnimation}
+          initial="hidden"
+          animate="visible"
+          className="text-white text-center mx-auto text-[16px] mt-[31px] leading-[122%] tracking-[1.2px] max-w-[238px] self-stretch xl:text-[24px] xl:max-w-[642px]"
+        >
           Кращий іноваційний партнер для безпеки доріг у вашій громаді.
-        </p>
+        </motion.p>
       </div>
     </section>
   );

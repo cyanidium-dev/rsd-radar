@@ -16,6 +16,10 @@ export type RadarItem = {
   slug: string;
 };
 
+export type RadarPageProps = {
+  params: Promise<{ slug: string }>;
+};
+
 export interface IBurgerNavigationProps extends React.ComponentProps<"nav"> {
   isOpen: boolean;
   onClose: () => void;
@@ -60,4 +64,14 @@ export interface IContactFormProps {
   variant?: "white" | "black";
   onSubmit?: (data: IFormData) => void;
   formClassName?: string;
+}
+
+export interface IRowData {
+  label: string;
+  value: string;
+}
+
+export interface ITableProps extends React.ComponentProps<"div"> {
+  data: IRowData[];
+  variant?: "default" | "radar";
 }

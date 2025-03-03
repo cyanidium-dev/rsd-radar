@@ -69,6 +69,15 @@ input:focus-visible {
     background-image: url("../../public/images/contact-desk2.jpg");
   }
 }
+.radar-bg_hero {
+  background-image: url("../../public/images/radar-page-hero-mob.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (min-width: 768px) {
+    background-image: url("../../public/images/radar-page-hero-desk.jpg");
+  }
+}
 @layer utilities {
   .logo {
     @apply text-[14px] font-bold leading-normal tracking-[7px] uppercase xl:text-[20px];
