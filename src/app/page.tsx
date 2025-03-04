@@ -1,4 +1,11 @@
 import { Metadata } from "next";
+import Advantages from "@/modules/Advantages/Advantages";
+import DirectionsOfUse from "@/modules/DirectionsOfUse/DirectionsOfUse";
+import InnovativeRoadSigns from "@/modules/InnovativeRoadSigns/InnovativeRoadSigns";
+import RadarsModels from "@/modules/RadarsModels/RadarsModels";
+import Hero from "@/modules/Hero/Hero";
+import TopContactsSection from "@/modules/Contacts/TopContactsSection";
+import BotContactsSection from "@/modules/Contacts/BotContactsSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
@@ -25,17 +32,17 @@ export async function generateMetadata(): Promise<Metadata> {
       url: baseUrl,
       title: defaultTitle,
       description: description,
+      images: [
+        {
+          url: "/images/top-contacts/radar-desk.png",
+          width: 1200,
+          height: 630,
+          alt: "RSD Radar",
+        },
+      ],
     },
   };
 }
-
-import Advantages from "@/modules/Advantages/Advantages";
-import DirectionsOfUse from "@/modules/DirectionsOfUse/DirectionsOfUse";
-import InnovativeRoadSigns from "@/modules/InnovativeRoadSigns/InnovativeRoadSigns";
-import RadarsModels from "@/modules/RadarsModels/RadarsModels";
-import Hero from "@/modules/Hero/Hero";
-import TopContactsSection from "@/modules/Contacts/TopContactsSection";
-import BotContactsSection from "@/modules/Contacts/BotContactsSection";
 
 export default function Home() {
   return (
