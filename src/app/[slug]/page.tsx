@@ -24,15 +24,15 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
         <Image
           src="/images/radar-page/radar-mob.png"
           alt="Radar"
-          width={187}
-          height={381}
+          width={204}
+          height={407}
           className="mx-auto md:hidden"
         />
         <Image
           src="/images/radar-page/radar-desk.png"
           alt="Radar"
-          width={359}
-          height={747}
+          width={372}
+          height={741}
           className="mx-auto hidden md:block"
         />
       </div>

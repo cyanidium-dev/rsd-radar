@@ -62,7 +62,7 @@ const RadarsModels = () => {
               alt="Radar"
               width={420}
               height={863}
-              className="hidden xl:block xl:w-[382px] xl:h-[538px] xxl:h-[769px] xxl:w-[546px]"
+              className="hidden  xl:block "
             />
           </motion.div>
         </div>
