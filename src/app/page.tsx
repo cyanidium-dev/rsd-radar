@@ -6,7 +6,6 @@ import RadarsModels from "@/modules/RadarsModels/RadarsModels";
 import Hero from "@/modules/Hero/Hero";
 import TopContactsSection from "@/modules/Contacts/TopContactsSection";
 import BotContactsSection from "@/modules/Contacts/BotContactsSection";
-
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
   const defaultTitle = "RSD Radar | Безпека доріг";
@@ -34,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: description,
       images: [
         {
-          url: "/images/top-contacts/radar-desk.png",
+          url: "/images/radar-desk.png",
           width: 1200,
           height: 630,
           alt: "RSD Radar",
