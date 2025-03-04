@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: description,
       images: [
         {
-          url: "../../public/images/radar-desk.png",
+          url: "/images/radar-desk.png",
           width: 1200,
           height: 630,
           alt: "RSD Radar Logo",
