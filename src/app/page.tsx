@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Advantages />
       <InnovativeRoadSigns />
+      <Advantages />
       <TopContactsSection />
       <RadarsModels />
       <DirectionsOfUse />

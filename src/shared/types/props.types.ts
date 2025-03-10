@@ -43,7 +43,7 @@ export interface IContactsModal {
 
 export interface IRadarListItemProps extends React.ComponentProps<"div"> {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   onOrder: () => void;
   onMore: () => void;
 }

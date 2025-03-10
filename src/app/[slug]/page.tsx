@@ -9,6 +9,9 @@ import { CircleIcon } from "../../../public/images/icons";
 import { Table } from "@/shared/components/Table/Table";
 import { motion } from "framer-motion";
 import { easeOutAnimation } from "@/shared/utils/animation";
+import AdditionalPlus from "@/shared/components/AdditionalInformation/AdditionalPlus";
+import AdditionalBusiness from "@/shared/components/AdditionalInformation/AdditionalBusiness";
+import AdditionalIndividual from "@/shared/components/AdditionalInformation/AdditionalIndividual";
 
 export default function RadarInfoPage({ params }: RadarPageProps) {
   const { slug } = React.use(params);
@@ -24,27 +27,28 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
         <Image
           src="/images/radar-page/radar-mob.png"
           alt="Radar"
-          width={204}
-          height={407}
-          className="mx-auto md:hidden"
+          width={229}
+          height={470}
+          className="mx-auto w-[229px] h-[470px] object-contain md:hidden"
         />
         <Image
           src="/images/radar-page/radar-desk.png"
           alt="Radar"
-          width={372}
-          height={741}
-          className="mx-auto hidden md:block"
+          width={420}
+          height={863}
+          className="mx-auto w-[420px]  h-[863px] object-contain hidden md:block"
         />
       </div>
+
       <div className="container mx-auto px-[24px] pt-[70px] pb-[128px] xl:px-[150px]">
         <motion.div
           variants={easeOutAnimation}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="sm:flex sm:justify-between sm:items-start"
+          className="sm:flex sm:justify-between sm:items-start "
         >
-          <div className="flex flex-col gap-[14px] xl:max-w-[497px] xxl:max-w-[609px]">
+          <div className="flex flex-col gap-[14px] sm:max-w-[250px] md:max-w-[330px] xl:max-w-[497px]">
             <motion.p
               custom={0}
               variants={easeOutAnimation}
@@ -109,12 +113,15 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
             viewport={{ once: true }}
             className="mt-[42px] sm:mt-0 text-[14px] xl:text-[18px] text-dark font-light sm:max-w-[300px] lg:max-w-[400px] xl:max-w-[500px] xxl:max-w-[600px]"
           >
-            Radar використовує сучасні світлодіодні дисплеї з високою якістю
-            зображення. Що дозволяє підсилити кольором емоцію реакції смайла на
-            швидкість Забезпечить чіткі та зрозумілі повідомлення водію, щодо
-            його швидкості та безпечної швидкості.
+            Сучасні світлодіодні дисплеї з високою якістю зображення. Підсилює
+            кольором реакцію емоцію на швидкість. Забезпечує чіткі та зрозумілі
+            повідомлення водію, щодо швидкості його автомобіля та встановленої
+            безпечної швидкості.
           </motion.p>
         </motion.div>
+        {slug === "rsd-radar-plus" && <AdditionalPlus />}
+        {slug === "rsd-radar-for-business" && <AdditionalBusiness />}
+        {slug === "rsd-radar-individual" && <AdditionalIndividual />}
         <motion.div
           variants={easeOutAnimation}
           initial="hidden"
@@ -145,21 +152,13 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
                 <span>
                   <CircleIcon className="w-[14px] h-[14px]" />
                 </span>
-                <p>Закріплюється на висоті не менше 2.5 метра над землею.</p>
+                <p>
+                  Встановлюється з правого боку дороги – у напрямку до руху.
+                </p>
               </motion.li>
+
               <motion.li
                 custom={2}
-                variants={easeOutAnimation}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="text-dark text-[14px] xl:text-[18px] flex gap-[12px] items-center"
-              >
-                <CircleIcon className="w-[14px] h-[14px]" />
-                <p>Перпендикулярно до осі дороги.</p>
-              </motion.li>
-              <motion.li
-                custom={3}
                 variants={easeOutAnimation}
                 initial="hidden"
                 whileInView="visible"
@@ -169,13 +168,16 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
                 <span>
                   <CircleIcon className="w-[14px] h-[14px]" />
                 </span>
-                <p>Встановлюється з правого боку дороги – у напрямку руху.</p>
+                <p>
+                  Закріплюється на висоті не менше 2.5 метра над рівнем
+                  дорожнього покриття
+                </p>
               </motion.li>
             </ul>
           </div>
           <div className="flex flex-col gap-[18px] mt-[70px] sm:mt-0 sm:max-w-[300px] lg:max-w-[400px] xl:max-w-[500px] xxl:max-w-[600px]">
             <motion.h2
-              custom={4}
+              custom={3}
               variants={easeOutAnimation}
               initial="hidden"
               whileInView="visible"
@@ -185,19 +187,16 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
               Монтаж
             </motion.h2>
             <motion.p
-              custom={5}
+              custom={4}
               variants={easeOutAnimation}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               className="text-[14px] xl:text-[18px] font-light"
             >
-              В комплект входять стандартні монтажні кріплення. ЕмОніК легко
+              В комплект входять стандартні монтажні кріплення. RSD RADAR легко
               встановлюється на існуючі стовпи (наприклад, освітлення або
-              електромережі) за допомогою стандартних монтажних кріплень. Для
-              підключення достатньо під&apos;єднати пристрій до постійного
-              джерела електроживлення (з підключенням до мережі або через
-              розетку).
+              електромережі) за допомогою стандартних монтажних кріплень.
             </motion.p>
           </div>
         </motion.div>

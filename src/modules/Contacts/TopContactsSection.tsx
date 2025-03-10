@@ -2,13 +2,14 @@
 import ContactForm from "@/shared/components/ContactForm/ContactForm";
 import React from "react";
 import { motion } from "framer-motion";
-import { easeOutAnimation } from '@/shared/utils/animation';
+import { easeOutAnimation } from "@/shared/utils/animation";
 
 const TopContactsSection = () => {
-
-
   return (
-    <section className="px-[32px] py-[183px] xl:pl-[70px] contacts-bg_first">
+    <section
+      id="contacts"
+      className="px-[32px] py-[183px] xl:pl-[70px] contacts-bg_first"
+    >
       <div className="bg-white py-[36px] px-[26px] xl:px-[95px] xl:py-[65px] rounded-[12px] max-w-[420px] xl:max-w-[653px] xl:mx-0 xl:mr-auto mx-auto">
         <motion.h2
           custom={0}

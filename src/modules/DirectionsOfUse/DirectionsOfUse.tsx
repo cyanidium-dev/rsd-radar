@@ -11,9 +11,9 @@ const DirectionsOfUse = () => {
   return (
     <section id="directions" className="bg-white">
       <div className="container mx-auto sm:px-4 md:px-3 lg:px-6 px-6 pt-[128px] pb-[64px] xl:px-[150px]">
-        <div className="flex xxl:hidden flex-col sm:flex-row sm:items-center xxl:flex-row-reverse">
+        <div className="flex xxl:hidden flex-col sm:flex-row sm:items-center">
           {/* Текстові блоки */}
-          <div className="w-full sm:w-1/2 xxl:w-full sm:pr-8 2xl:pr-0 xxl:flex">
+          <div className="w-full  sm:pr-8 2xl:pr-0 ">
             <div>
               <motion.h2
                 custom={0}
@@ -113,7 +113,7 @@ const DirectionsOfUse = () => {
           </div>
 
           {/* Зображення */}
-          <div className="sm:block sm:w-1/2 xxl:w-[508px] sm:pl-8 mt-[48px] sm:mt-0 flex items-center justify-center 2xl:items-start">
+          <div className="sm:block sm:w-1/2 sm:ml-auto mt-[48px] sm:mt-0 flex items-center justify-center 2xl:items-end">
             <motion.div
               custom={7}
               variants={easeOutAnimation}
@@ -124,9 +124,9 @@ const DirectionsOfUse = () => {
               <Image
                 src="/images/directions/radar-mob.png"
                 alt="Radar"
-                width={181}
-                height={419}
-                className="w-full xl:hidden h-auto object-contain"
+                width={229}
+                height={470}
+                className="xl:hidden object-contain ml-auto h-[470px]"
               />
             </motion.div>
             <motion.div
@@ -139,9 +139,9 @@ const DirectionsOfUse = () => {
               <Image
                 src="/images/directions/radar-desk.png"
                 alt="Radar"
-                width={398}
-                height={916}
-                className="w-full hidden xl:block h-auto object-contain xxl:w-[508px] xxl:h-[622px]"
+                width={420}
+                height={863}
+                className=" hidden xl:block w-[420px] h-[863px]  object-contain "
               />
             </motion.div>
           </div>

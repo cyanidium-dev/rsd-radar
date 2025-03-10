@@ -16,7 +16,7 @@ const RadarsModels = () => {
     <section id="productions" className="models-bg">
       <div className="container mx-auto px-6 pt-[109px] xl:px-[150px] xl:py-[120px]">
         <div className="xl:flex xl:flex-row-reverse xl:justify-between xl:items-center">
-          <div>
+          <div className="w-full">
             <motion.h2
               custom={0}
               variants={easeOutAnimation}
@@ -28,7 +28,7 @@ const RadarsModels = () => {
               Моделі RSD RADAR
             </motion.h2>
 
-            <div className="mt-[90px] xl:mt-[58px] grid grid-cols-1 md:grid-cols-2 gap-[40px] xl:gap-[20px] mx-auto max-w-[312px] md:max-w-full xl:max-[275px]">
+            <div className="mt-[90px] xl:mt-[58px] auto-rows-max grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-[40px] xl:gap-[20px] xl:mx-0 xl:ml-auto mx-auto max-w-[312px] md:max-w-full  xl:max-w-[727px] w-full">
               {radarItems.map((radar, index) => (
                 <motion.div
                   key={index}
@@ -37,7 +37,7 @@ const RadarsModels = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="h-full w-full max-w-[312px] md:max-w-full xl:max-w-[275px] justify-items-stretch flex items-stretch"
+                  className="h-full w-full"
                 >
                   <RadarListItem
                     title={radar.title}
@@ -62,7 +62,7 @@ const RadarsModels = () => {
               alt="Radar"
               width={420}
               height={863}
-              className="hidden  xl:block "
+              className="hidden xl:block"
             />
           </motion.div>
         </div>

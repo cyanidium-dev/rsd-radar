@@ -19,8 +19,9 @@ const DirectionOfUseDesktop = () => {
         <Image
           src="/images/directions/radar-desk.png"
           alt="Radar"
-          width={398}
-          height={916}
+          width={420}
+          height={863}
+          className="w-[420px] h-[863px] object-contain"
         />
       </motion.div>
       <div className="ml-[65px]">

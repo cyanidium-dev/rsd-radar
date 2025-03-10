@@ -11,23 +11,24 @@ const Hero = () => {
         <Image
           src="/images/hero/radar-mob.png"
           alt="Radar"
-          width={139}
-          height={285}
+          width={229}
+          height={470}
           className="xl:hidden"
         />
         <Image
           alt="Radar"
           className="hidden xl:block"
           src="/images/hero/radar-desk.png"
-          width={253}
-          height={522}
+          width={420}
+          height={863}
         />
 
         <motion.h1
           custom={0}
+          viewport={{ once: true }}
           variants={easeOutAnimation}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
           className="mt-[31px] text-white text-[36px] font-extrabold leading-[150%] text-center tracking-[4.12px] uppercase xl:text-[64px] xl:mt-[82px]"
         >
           RSD Radar
@@ -35,9 +36,10 @@ const Hero = () => {
 
         <motion.h2
           custom={1}
+          viewport={{ once: true }}
           variants={easeOutAnimation}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
           className="mt-[10px] text-center text-white leading-[150%] tracking-[5.12px] self-stretch font-medium text-[16px] uppercase xl:text-[24px]"
         >
           Road Safety device
@@ -45,12 +47,13 @@ const Hero = () => {
 
         <motion.p
           custom={2}
+          viewport={{ once: true }}
           variants={easeOutAnimation}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
           className="text-white text-center mx-auto text-[16px] mt-[31px] leading-[122%] tracking-[1.2px] max-w-[238px] self-stretch xl:text-[24px] xl:max-w-[642px]"
         >
-          Кращий іноваційний партнер для безпеки доріг у вашій громаді.
+          Іновації для підвищення безпеки дорожнього руху у вашій громаді.
         </motion.p>
       </div>
     </section>

@@ -54,9 +54,9 @@ const BotContactsSection = () => {
             <Image
               src="/images/bot-contacts/radar-mob.png"
               alt="Radar"
-              width={200}
-              height={398}
-              className="xl:hidden mx-auto mt-[73px] md:mt-0 md:mx-0"
+              width={229}
+              height={470}
+              className="xl:hidden h-[470px] object-contain mx-auto mt-[73px] md:mt-0 md:mx-0"
             />
           </motion.div>
           <motion.div
@@ -69,9 +69,9 @@ const BotContactsSection = () => {
             <Image
               src="/images/bot-contacts/radar-desk.png"
               alt="Radar"
-              width={372}
-              height={741}
-              className="hidden xl:block"
+              width={420}
+              height={863}
+              className="hidden xl:block h-[863px] object-contain"
             />
           </motion.div>
         </div>
