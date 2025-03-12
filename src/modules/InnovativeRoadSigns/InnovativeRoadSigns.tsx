@@ -18,7 +18,7 @@ const InnovativeRoadSigns = () => {
               viewport={{ once: true }}
               className="text-white text-[24px] font-medium leading-[122%] tracking-[3.2px] uppercase xl:text-[40px]"
             >
-              Інноваційне дорожнє табло
+              Інноваційне дорожнє табло RSD-Radar
             </motion.h2>
 
             <ul className="mt-[48px] xl:mt-[90px] grid grid-cols-1 gap-[48px] xl:gap-[70px] sm:grid-cols-2 xl:flex xxl:flex xxl:gap-[70px]">
@@ -29,7 +29,7 @@ const InnovativeRoadSigns = () => {
                   width: "xxl:w-[311px]",
                 },
                 {
-                  title: "Зменшує швидкість для підвищення безпеки",
+                  title: "Дотримання встановленої швидкості",
                   desc: "Спонукає та заохочує водія дотримуватись встановленої швидкості",
                   width: "xxl:w-[207px]",
                 },
@@ -54,7 +54,7 @@ const InnovativeRoadSigns = () => {
                   className="flex flex-col gap-4"
                 >
                   <h3
-                    className={`text-white text-[16px] md:max-w-[328px] xl:text-[24px] self-stretch font-medium leading-[122%] tracking-[1.92px] ${item.width}`}
+                    className={`text-white text-[18px] md:max-w-[328px] xl:text-[24px] self-stretch font-medium leading-[122%] tracking-[1.92px] ${item.width}`}
                   >
                     {item.title}
                   </h3>

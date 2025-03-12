@@ -17,7 +17,7 @@ const Advantages = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-dark text-[16px] tracking-[2.24px] md:text-[18px] lg:text-[20px]"
+            className="text-dark text-[18px] tracking-[2.24px] md:text-[18px] lg:text-[20px]"
           >
             RSD Radar
           </motion.h2>
@@ -55,7 +55,7 @@ const Advantages = () => {
                 viewport={{ once: true }}
                 className="flex flex-col gap-2 max-w-[243px] sm:max-w-[250px] md:max-w-[260px] lg:max-w-[280px] xl:max-w-[398px]"
               >
-                <h5 className="text-dark text-[16px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-medium leading-[122%] tracking-[1.92px]">
+                <h5 className="text-dark text-[18px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-medium leading-[122%] tracking-[1.92px]">
                   {
                     [
                       "Емоційна взаємодія",
@@ -65,7 +65,7 @@ const Advantages = () => {
                     ][index]
                   }
                 </h5>
-                <p className="text-dark text-[14px] md:text-[15px] lg:text-[16px] xl:text-[16px] font-light leading-[122%]">
+                <p className="text-dark text-[14px] md:text-[15px] lg:text-[18px] xl:text-[18px] font-light leading-[122%]">
                   {
                     [
                       "Унікальна емоційна взаємодія",
@@ -75,7 +75,7 @@ const Advantages = () => {
                   }
                 </p>
                 {index === 0 && (
-                  <h5 className="text-dark text-[16px] mt-[56px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-medium leading-[122%] tracking-[1.92px]">
+                  <h5 className="text-dark text-[18px] mt-[56px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-medium leading-[122%] tracking-[1.92px]">
                     Гарантія та сервіс
                   </h5>
                 )}

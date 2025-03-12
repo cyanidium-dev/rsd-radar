@@ -18,7 +18,7 @@ const Hero = () => {
         <Image
           alt="Radar"
           className="hidden xl:block"
-          src="/images/hero/radar-desk.png"
+          src="/images/hero/radar-desk1.png"
           width={420}
           height={863}
         />
@@ -40,7 +40,7 @@ const Hero = () => {
           variants={easeOutAnimation}
           initial="hidden"
           whileInView="visible"
-          className="mt-[10px] text-center text-white leading-[150%] tracking-[5.12px] self-stretch font-medium text-[16px] uppercase xl:text-[24px]"
+          className="mt-[10px] text-center text-white leading-[150%] tracking-[5.12px] self-stretch font-medium text-[18px] uppercase xl:text-[24px]"
         >
           Road Safety device
         </motion.h2>
@@ -51,7 +51,7 @@ const Hero = () => {
           variants={easeOutAnimation}
           initial="hidden"
           whileInView="visible"
-          className="text-white text-center mx-auto text-[16px] mt-[31px] leading-[122%] tracking-[1.2px] max-w-[238px] self-stretch xl:text-[24px] xl:max-w-[642px]"
+          className="text-white text-center mx-auto text-[18px] mt-[31px] leading-[122%] tracking-[1.2px] max-w-[238px] self-stretch xl:text-[24px] xl:max-w-[642px]"
         >
           Іновації для підвищення безпеки дорожнього руху у вашій громаді.
         </motion.p>

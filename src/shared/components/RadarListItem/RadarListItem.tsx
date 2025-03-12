@@ -17,18 +17,20 @@ const RadarListItem = ({
         <h3 className="text-[24px] uppercase font-medium tracking-[1.92px] text-left text-white">
           {title}
         </h3>
-        <p className="text-[12px] font-light text-white">{subtitle}</p>
+        <p className="text-[14px] xl:text-[18px] font-light text-white">
+          {subtitle}
+        </p>
       </div>
       <div className="flex flex-col gap-[12px]">
         <Button
           onClick={onOrder}
-          className="h-[40px]"
+          className="h-[40px] !text-[18px]"
           variant="white"
           text="Замовити"
         />
         <Button
           onClick={onMore}
-          className="h-[40px] border-[1px] border-white shadow-none"
+          className="h-[40px] !text-[18px] border-[1px] border-white shadow-none"
           text="Дізнатись більше"
         />
       </div>

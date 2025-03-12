@@ -23,7 +23,7 @@ const RadarsModels = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-center max-w-[229px] mx-auto uppercase text-[32px] xl:text-[32px] xl:max-w-full text-white leading-[122%] tracking-[3.2px] font-medium"
+              className="text-center xxl:ml-[185px] max-w-[229px] mx-auto uppercase text-[32px] xl:text-[32px] xl:max-w-full text-white leading-[122%] tracking-[3.2px] font-medium"
             >
               Моделі RSD RADAR
             </motion.h2>

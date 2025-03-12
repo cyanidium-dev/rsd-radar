@@ -31,7 +31,7 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <Link
-                className="text-white text-[16px] tracking-[0.64px] hover:opacity-80 hover:text-gray-300 transition duration-300"
+                className="text-white text-[18px] tracking-[0.64px] hover:opacity-80 hover:text-gray-300 transition duration-300"
                 href="/"
               >
                 Наші переваги
@@ -45,7 +45,7 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <Link
-                className="text-white text-[16px] tracking-[0.64px] hover:opacity-80 hover:text-gray-300 transition duration-300"
+                className="text-white text-[18px] tracking-[0.64px] hover:opacity-80 hover:text-gray-300 transition duration-300"
                 href="/"
               >
                 Про нас
@@ -59,7 +59,7 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <Link
-                className="text-white text-[16px] tracking-[0.64px] hover:opacity-80 hover:text-gray-300 transition duration-300"
+                className="text-white text-[18px] tracking-[0.64px] hover:opacity-80 hover:text-gray-300 transition duration-300"
                 href="/"
               >
                 Продукція
@@ -73,7 +73,7 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <Link
-                className="text-white text-[16px] tracking-[0.64px] hover:opacity-80 hover:text-gray-300 transition duration-300"
+                className="text-white text-[18px] tracking-[0.64px] hover:opacity-80 hover:text-gray-300 transition duration-300"
                 href="/"
               >
                 Напрямки
@@ -89,7 +89,7 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <a
-                className="text-white text-[16px] tracking-[0.64px] hover:opacity-80 hover:text-gray-300 transition duration-300"
+                className="text-white text-[18px] tracking-[0.64px] hover:opacity-80 hover:text-gray-300 transition duration-300"
                 href="tel:+380441234567"
               >
                 Тел.: +38 044 123 45 67
@@ -103,7 +103,7 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <a
-                className="text-white text-[16px] tracking-[0.64px] hover:opacity-80 hover:text-gray-300 transition duration-300"
+                className="text-white text-[18px] tracking-[0.64px] hover:opacity-80 hover:text-gray-300 transition duration-300"
                 href="mailto:info@mysite.ua"
               >
                 Email: info@mysite.ua
@@ -117,10 +117,10 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <div>
-                <p className="text-white text-[16px] md:text-left tracking-[0.64px] text-center max-w-[190px]">
+                <p className="text-white text-[18px] md:text-left tracking-[0.64px] text-center ">
                   вул. Хрещатик, 22
                 </p>
-                <p className="text-white text-[16px] md:text-left tracking-[0.64px] text-center max-w-[190px]">
+                <p className="text-white text-[18px] md:text-left tracking-[0.64px] text-center ">
                   м. Київ, 01001, Україна
                 </p>
               </div>
@@ -134,7 +134,7 @@ const Footer = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-white text-center leading-[180%] tracking-[0.64px] text-[16px]"
+            className="text-white text-center leading-[180%] tracking-[0.64px] text-[18px]"
           >
             © 2025 RSD Radar
           </motion.p>
@@ -144,7 +144,7 @@ const Footer = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-white text-center leading-[180%] tracking-[0.64px] text-[16px]"
+            className="text-white text-center leading-[180%] tracking-[0.64px] text-[18px]"
           >
             Сайт розробили{" "}
             <Link

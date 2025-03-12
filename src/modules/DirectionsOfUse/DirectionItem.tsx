@@ -14,7 +14,7 @@ const DirectionItem = ({
     <div className={clsx("flex flex-col gap-4", className)} {...props}>
       <h3
         className={clsx(
-          "self-stretch text-[16px] text-dark font-medium leading-[122%] tracking-[1.92px] xl:text-[24px]",
+          "self-stretch text-[18px] text-dark font-medium leading-[122%] tracking-[1.92px] xl:text-[24px]",
           titleClassName
         )}
       >

@@ -103,7 +103,7 @@ const ContactForm = ({
         <h2 className="text-white text-center text-[24px] font-extrabold uppercase">
           Дякуємо за відповідь!
         </h2>
-        <p className="mt-[20px] max-w-[256px] flex justify-center mx-auto text-center text-white text-[16px] font-light">
+        <p className="mt-[20px] max-w-[256px] flex justify-center mx-auto text-center text-white text-[18px] font-light">
           Найближчим часом менеджер зв’яжеться з Вами!
         </p>
       </Modal>

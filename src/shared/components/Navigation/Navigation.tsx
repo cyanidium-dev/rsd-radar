@@ -13,7 +13,7 @@ const Navigation = ({ className, ...props }: React.ComponentProps<"nav">) => {
     <nav className={clsx(className, "flex gap-[29px]")} {...props}>
       {navLinks.map((link, index) => (
         <Link
-          className="text-dark hover:text-dark/70 text-[16px] font-normal leading-[50px] text-right"
+          className="text-dark hover:text-dark/70 text-[18px] font-normal leading-[50px] text-right"
           key={index}
           href={link.href}
         >

@@ -17,7 +17,7 @@ const TopContactsSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-dark text-[16px] font-medium uppercase tracking-[3.2px] xl:text-[36px]"
+          className="text-dark text-[18px] font-medium uppercase tracking-[3.2px] xl:text-[36px]"
         >
           Маєте запитання щодо RSD Radar?
         </motion.h2>
