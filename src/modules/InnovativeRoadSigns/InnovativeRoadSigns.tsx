@@ -34,7 +34,7 @@ const InnovativeRoadSigns = () => {
                   width: "xxl:w-[207px]",
                 },
                 {
-                  title: "Формування відповідальності",
+                  title: "Формує відповідальність",
                   desc: "Емоційна комунікація, практично, з усіма мешканцями громади – водії, пасажири, пішоходи. Допомагає формувати відчуття відповідальності в громаді до безпеки дорожнього руху.",
                   width: "xxl:w-[230px] xl:w-[230px]",
                 },
@@ -75,10 +75,11 @@ const InnovativeRoadSigns = () => {
               viewport={{ once: true }}
             >
               <Image
-                src="/images/innovative/radar-desk-second.png"
+                src="/images/innovative/radar-desk.webp"
                 alt="Radar"
                 width={420}
                 height={863}
+                quality={100}
                 className="hidden h-[863px] object-contain  xxl:block"
               />
             </motion.div>
@@ -89,7 +90,7 @@ const InnovativeRoadSigns = () => {
               viewport={{ once: true }}
             >
               <Image
-                src="/images/innovative/radar-mob-second.png"
+                src="/images/innovative/radar-mob.webp"
                 alt="Radar"
                 width={229}
                 height={470}

@@ -17,7 +17,7 @@ const DirectionOfUseDesktop = () => {
         viewport={{ once: true }}
       >
         <Image
-          src="/images/directions/radar-desk.png"
+          src="/images/directions/radar-desk.webp"
           alt="Radar"
           width={420}
           height={863}

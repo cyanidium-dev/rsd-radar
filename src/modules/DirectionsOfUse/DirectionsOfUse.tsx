@@ -122,7 +122,7 @@ const DirectionsOfUse = () => {
               viewport={{ once: true }}
             >
               <Image
-                src="/images/directions/radar-mob.png"
+                src="/images/directions/radar-mob.webp"
                 alt="Radar"
                 width={229}
                 height={470}
@@ -137,7 +137,7 @@ const DirectionsOfUse = () => {
               viewport={{ once: true }}
             >
               <Image
-                src="/images/directions/radar-desk.png"
+                src="/images/directions/radar-desk.webp"
                 alt="Radar"
                 width={420}
                 height={863}

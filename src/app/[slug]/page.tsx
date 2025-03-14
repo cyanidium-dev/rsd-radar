@@ -25,14 +25,14 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
     <section className="bg-white">
       <div className="radar-bg_hero pt-[86px] pb-[93px] md:py-[53px]">
         <Image
-          src="/images/radar-page/radar-mob.png"
+          src="/images/radar-page/radar-mob.webp"
           alt="Radar"
           width={229}
           height={470}
           className="mx-auto w-[229px] h-[470px] object-contain md:hidden"
         />
         <Image
-          src="/images/radar-page/radar-desk.png"
+          src="/images/radar-page/radar-desk.webp"
           alt="Radar"
           width={420}
           height={863}
@@ -205,7 +205,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-[70px] flex flex-col gap-[70px] xl:flex-row xl:justify-between"
+          className="mt-[70px] flex flex-col gap-[70px] md:flex-row md:justify-between"
         >
           <div className="flex flex-col gap-[30px] justify-start items-start xl:min-w-[497px]">
             <motion.h2
@@ -228,7 +228,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
               <Table data={screenData} />
             </motion.div>
           </div>
-          <div className="flex flex-col gap-[30px] xl:max-w-[491px] 2xl:max-w-[500px]">
+          <div className="flex flex-col md:max-w-[300px] lg:max-w-[400px]  gap-[30px] xl:max-w-[491px] 2xl:max-w-[600px]">
             <motion.h2
               custom={2}
               variants={easeOutAnimation}

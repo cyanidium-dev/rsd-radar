@@ -1,9 +1,12 @@
+"use client";
 import { IModalProps } from "@/shared/types";
 import { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
+import { useScrollBodyLock } from "@/shared/hooks/useScrollBodyLock";
 
 const Modal = ({ isOpen, onClose, children, className }: IModalProps) => {
+  useScrollBodyLock(isOpen);
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

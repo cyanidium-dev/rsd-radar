@@ -58,7 +58,7 @@ const RadarsModels = () => {
             viewport={{ once: true }}
           >
             <Image
-              src="/images/models/radar-desk.png"
+              src="/images/models/radar-desk.webp"
               alt="Radar"
               width={420}
               height={863}
@@ -77,7 +77,7 @@ const RadarsModels = () => {
         className="models-bg_mob pt-[240px] pb-[120px] mt-[-85px] xl:hidden"
       >
         <Image
-          src="/images/models/radar-mob.png"
+          src="/images/models/radar-mob.webp"
           alt="Radar"
           width={229}
           height={470}

@@ -9,7 +9,7 @@ const Hero = () => {
     <section className="px-[42px] pt-[84px] pb-[111px] hero-bg xl:pb-[28px] xl:pt-[77px]">
       <div className="flex flex-col justify-center items-center">
         <Image
-          src="/images/hero/radar-mob.png"
+          src="/images/hero/radar-mob.webp"
           alt="Radar"
           width={229}
           height={470}
@@ -18,7 +18,7 @@ const Hero = () => {
         <Image
           alt="Radar"
           className="hidden xl:block"
-          src="/images/hero/radar-desk1.png"
+          src="/images/hero/radar-desk.webp"
           width={420}
           height={863}
         />

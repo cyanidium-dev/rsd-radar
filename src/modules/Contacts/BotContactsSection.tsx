@@ -52,7 +52,7 @@ const BotContactsSection = () => {
             className="md:ml-auto"
           >
             <Image
-              src="/images/bot-contacts/radar-mob.png"
+              src="/images/bot-contacts/radar-mob.webp"
               alt="Radar"
               width={229}
               height={470}
@@ -67,7 +67,7 @@ const BotContactsSection = () => {
             viewport={{ once: true }}
           >
             <Image
-              src="/images/bot-contacts/radar-desk.png"
+              src="/images/bot-contacts/radar-desk.webp"
               alt="Radar"
               width={420}
               height={863}

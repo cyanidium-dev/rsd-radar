@@ -12,6 +12,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   height: 100%;
   max-width: 100vw;
