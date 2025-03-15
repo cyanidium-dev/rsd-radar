@@ -25,18 +25,18 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
     <section className="bg-white">
       <div className="radar-bg_hero pt-[86px] pb-[93px] md:py-[53px]">
         <Image
-          src="/images/radar-page/radar-mob.webp"
+          src="/images/hero/radar-mob.webp"
           alt="Radar"
           width={229}
           height={470}
           className="mx-auto w-[229px] h-[470px] object-contain md:hidden"
         />
         <Image
-          src="/images/radar-page/radar-desk.webp"
+          src="/images/hero/radar-desk.webp"
           alt="Radar"
           width={420}
-          height={863}
-          className="mx-auto w-[420px]  h-[863px] object-contain hidden md:block"
+          height={463}
+          className="mx-auto w-[420px]  h-[463px] object-contain hidden md:block"
         />
       </div>
 
@@ -46,9 +46,9 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="sm:flex sm:justify-between sm:items-start "
+          className="md:flex md:justify-between gap-[40px] md:items-start "
         >
-          <div className="flex flex-col gap-[14px] sm:max-w-[250px] md:max-w-[330px] xl:max-w-[497px]">
+          <div className="flex flex-col gap-[14px]  ">
             <motion.p
               custom={0}
               variants={easeOutAnimation}
@@ -91,8 +91,21 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
                 Гарантія 1 рік.
               </motion.p>
             </motion.div>
+            {slug === "rsd-radar-standard" && (
+              <motion.div
+                custom={5}
+                variants={easeOutAnimation}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="flex justify-between text-[20px] xl:text-[24px] font-bold text-dark max-w-[280px] md:max-w-full"
+              >
+                <p>Вартість</p>
+                <span>10,00 ₴ без ПДВ</span>
+              </motion.div>
+            )}
             <motion.div
-              custom={4}
+              custom={6}
               variants={easeOutAnimation}
               initial="hidden"
               whileInView="visible"
@@ -106,12 +119,12 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
             </motion.div>
           </div>
           <motion.p
-            custom={5}
+            custom={7}
             variants={easeOutAnimation}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="mt-[42px] sm:mt-0 text-[14px] xl:text-[18px] text-dark font-light sm:max-w-[300px] lg:max-w-[400px] xl:max-w-[500px] xxl:max-w-[600px]"
+            className="mt-[42px] md:mt-0 text-[14px]  xl:text-[18px] text-dark font-light md:max-w-[300px]   lg:max-w-[400px] xl:max-w-[500px] xxl:max-w-[600px]"
           >
             Сучасні світлодіодні дисплеї з високою якістю зображення. Підсилює
             кольором реакцію емоцію на швидкість. Забезпечує чіткі та зрозумілі
@@ -196,7 +209,9 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
             >
               В комплект входять стандартні монтажні кріплення. RSD RADAR легко
               встановлюється на існуючі стовпи (наприклад, освітлення або
-              електромережі) за допомогою стандартних монтажних кріплень.
+              електромережі) за допомогою стандартних монтажних кріплень. Для
+              підключення достатньо під&apos;єднати пристрій до постійного
+              джерела електроживлення
             </motion.p>
           </div>
         </motion.div>

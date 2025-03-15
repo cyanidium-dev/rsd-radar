@@ -10,16 +10,16 @@ const AdditionalBusiness = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="text-[24px] mt-[20px] xl:mt-[40px] xl:text-[32px] max-w-[800px] font-extrabold uppercase text-dark"
+        className="text-[24px] flex flex-col mt-[20px] xl:mt-[40px] xl:text-[32px] max-w-[800px] font-extrabold uppercase text-dark"
       >
-        RSD RADAR БІЗНЕС виробляється на базі RSD RADAR СТАНДАРТ.
+        RSD RADAR БІЗНЕС <span>виробляється на базі RSD RADAR СТАНДАРТ.</span>
       </motion.h4>
 
       <ul className=" max-w-[497px] mt-[30px] flex flex-col gap-2">
         {[
-          "Індивідуальні налаштування да додаткові функціональні можливості, водповідно потребам вашогот бізнесу, або вашої громади.",
+          "Індивідуальні налаштування та додаткові функціональні можливості, водповідно потребам вашого бізнесу, або вашої громади.",
           "Наприклад, підїзди до АЗС, готелів, магазинів, бізнес центрів, тощо.",
-          "RSD RADAR БІЗНЕС може включати абонентську плату в залежності від додаткових функціональних можливлсстей якиі будуть встановленені.",
+          "RSD RADAR БІЗНЕС може включати абонентську плату в залежності від додаткових функціональних можливостей які будуть встановленені.",
         ].map((item, index) => (
           <motion.li
             key={index}
