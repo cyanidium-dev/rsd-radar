@@ -7,7 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { fetchSiteData } from "@/shared/utils/dotacms";
 
 export async function generateMetadata(props: {
-  params: Promise<{ locale?: "en" | "uk" }>;
+  params: Promise<{ locale?: "uk" | "en" }>;
 }): Promise<Metadata> {
   const { params } = props;
   const { locale = "uk" } = await params;
@@ -50,27 +50,27 @@ export async function generateMetadata(props: {
       },
       description,
     };
-  } else {
-    const defaultTitle = "RSD Radar | Безпека доріг";
-    const description =
-      "RSD Radar — інноваційні рішення для безпеки доріг. Дізнайся про наші радари, переваги та напрямки використання.";
-    const keywords = [
-      "RSD Radar",
-      "безпека доріг",
-      "радар для доріг",
-      "інноваційні радари",
-    ];
-
-    return {
-      ...defaultMetadata,
-      keywords,
-      title: {
-        default: defaultTitle,
-        template: `%s | RSD Radar`,
-      },
-      description,
-    };
   }
+
+  const defaultTitle = "RSD Radar | Безпека доріг";
+  const description =
+    "RSD Radar — інноваційні рішення для безпеки доріг. Дізнайся про наші радари, переваги та напрямки використання.";
+  const keywords = [
+    "RSD Radar",
+    "безпека доріг",
+    "радар для доріг",
+    "інноваційні радари",
+  ];
+
+  return {
+    ...defaultMetadata,
+    keywords,
+    title: {
+      default: defaultTitle,
+      template: `%s | RSD Radar`,
+    },
+    description,
+  };
 }
 const montserrat = Montserrat({
   subsets: ["latin"],
