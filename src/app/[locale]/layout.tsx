@@ -7,12 +7,28 @@ import { NextIntlClientProvider } from "next-intl";
 import { fetchSiteData } from "@/shared/utils/dotacms";
 
 export async function generateMetadata(props: {
-  params: Promise<{ locale: "en" | "uk" }>;
+  params: Promise<{ locale?: "en" | "uk" }>;
 }): Promise<Metadata> {
   const { params } = props;
-  const { locale } = await params;
+  const { locale = "uk" } = await params;
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL || "https://rsd-radar.vercel.app";
+
+  const defaultMetadata = {
+    metadataBase: new URL(baseUrl),
+    openGraph: {
+      type: "website",
+      url: baseUrl,
+      images: [
+        {
+          url: "/images/bot-contacts/radar-desk.webp",
+          width: 1200,
+          height: 630,
+          alt: "RSD Radar Logo",
+        },
+      ],
+    },
+  };
 
   if (locale === "en") {
     const defaultTitle = "RSD Radar | Road Safety";
@@ -26,27 +42,13 @@ export async function generateMetadata(props: {
     ];
 
     return {
-      metadataBase: new URL(baseUrl),
+      ...defaultMetadata,
       keywords,
       title: {
         default: defaultTitle,
         template: `%s | RSD Radar`,
       },
       description,
-      openGraph: {
-        type: "website",
-        url: baseUrl,
-        title: defaultTitle,
-        description,
-        images: [
-          {
-            url: "/images/radar-desk.png",
-            width: 1200,
-            height: 630,
-            alt: "RSD Radar Logo",
-          },
-        ],
-      },
     };
   } else {
     const defaultTitle = "RSD Radar | Безпека доріг";
@@ -60,31 +62,16 @@ export async function generateMetadata(props: {
     ];
 
     return {
-      metadataBase: new URL(baseUrl),
+      ...defaultMetadata,
       keywords,
       title: {
         default: defaultTitle,
         template: `%s | RSD Radar`,
       },
       description,
-      openGraph: {
-        type: "website",
-        url: baseUrl,
-        title: defaultTitle,
-        description,
-        images: [
-          {
-            url: "/images/radar-desk.png",
-            width: 1200,
-            height: 630,
-            alt: "RSD Radar Logo",
-          },
-        ],
-      },
     };
   }
 }
-
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
