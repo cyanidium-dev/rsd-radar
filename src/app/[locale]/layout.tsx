@@ -19,8 +19,9 @@ export async function generateMetadata(props: {
     metadataBase: new URL(baseUrl),
     openGraph: {
       type: "website",
-      url: baseUrl,
+      url: `${baseUrl}/${locale}`,
       locale: locale === "en" ? "en_US" : "uk_UA",
+      siteName: "RSD Radar",
       images: [
         {
           url: "/images/bot-contacts/radar-desk.webp",
@@ -32,16 +33,22 @@ export async function generateMetadata(props: {
     },
   };
 
-  if (locale === "en") {
-    const defaultTitle = "RSD Radar | Road Safety";
+  if (!locale || locale === "en") {
+    const defaultTitle =
+      locale === "en" ? "RSD Radar | Road Safety" : "RSD Radar | Безпека доріг";
     const description =
-      "RSD Radar — innovative solutions for road safety. Learn about our radars, their benefits and applications.";
-    const keywords = [
-      "RSD Radar",
-      "road safety",
-      "road radar",
-      "innovative radars",
-    ];
+      locale === "en"
+        ? "RSD Radar — innovative solutions for road safety. Learn about our radars, their benefits and applications."
+        : "RSD Radar — інноваційні рішення для безпеки доріг. Дізнайся про наші радари, переваги та напрямки використання.";
+    const keywords =
+      locale === "en"
+        ? ["RSD Radar", "road safety", "road radar", "innovative radars"]
+        : [
+            "RSD Radar",
+            "безпека доріг",
+            "радар для доріг",
+            "інноваційні радари",
+          ];
 
     return {
       ...defaultMetadata,
