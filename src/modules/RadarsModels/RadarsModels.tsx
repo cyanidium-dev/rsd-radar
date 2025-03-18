@@ -1,16 +1,19 @@
 "use client";
 import RadarListItem from "@/shared/components/RadarListItem/RadarListItem";
-import { radarItems } from "@/shared/constants";
-import { useState } from "react";
 import ContactsModal from "../ContactsModal/ContactsModal";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { easeOutAnimation } from "@/shared/utils/animation";
+import { easeOutAnimation } from "@/shared/utils/animation/animation";
+import { useTranslations } from "next-intl";
+import { IRadarItem } from "@/shared/types";
 
 const RadarsModels = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
+  const t = useTranslations("RadarsModels");
+  const radarItems = Object.values(t.raw("items")) as IRadarItem[];
 
   return (
     <section id="productions" className="models-bg">
@@ -25,10 +28,10 @@ const RadarsModels = () => {
               viewport={{ once: true }}
               className="text-center xxl:ml-[185px] max-w-[229px] mx-auto uppercase text-[32px] xl:text-[32px] xl:max-w-full text-white leading-[122%] tracking-[3.2px] font-medium"
             >
-              Моделі RSD RADAR
+              {t("title")}
             </motion.h2>
 
-            <div className="mt-[90px] xl:mt-[58px] auto-rows-max grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-[40px] xl:gap-[20px] xl:mx-0 xl:ml-auto mx-auto max-w-[312px] md:max-w-full  xl:max-w-[727px] w-full">
+            <div className="mt-[90px] xl:mt-[58px] auto-rows-max grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-[40px] xl:gap-[20px] xl:mx-0 xl:ml-auto mx-auto max-w-[312px] md:max-w-full xl:max-w-[727px] w-full">
               {radarItems.map((radar, index) => (
                 <motion.div
                   key={index}
@@ -81,7 +84,7 @@ const RadarsModels = () => {
           alt="Radar"
           width={229}
           height={470}
-          className="mx-auto  xl:hidden"
+          className="mx-auto xl:hidden"
         />
       </motion.div>
       {isModalOpen && (

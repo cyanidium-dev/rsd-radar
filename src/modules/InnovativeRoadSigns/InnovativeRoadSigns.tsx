@@ -2,9 +2,28 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import { easeOutAnimation } from "@/shared/utils/animation";
+import { easeOutAnimation } from "@/shared/utils/animation/animation";
+import { useTranslations } from "next-intl";
 
 const InnovativeRoadSigns = () => {
+  const t = useTranslations("InnovativeRoadSigns");
+
+  const featuresWidth = [
+    "xxl:w-[311px]",
+    "xxl:w-[207px]",
+    "xxl:w-[230px] xl:w-[230px]",
+    "xxl:w-[199px]",
+  ];
+
+  const features = Object.values(t.raw("features")).map(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (feature: any, index) => ({
+      title: feature.title,
+      desc: feature.desc,
+      width: featuresWidth[index],
+    })
+  );
+
   return (
     <section id="about-us">
       <div className="container px-6 md:px-8 mx-auto pt-[128px] pb-[50px] xl:pl-[150px] xxl:pr-[150px] bg-dark">
@@ -18,32 +37,11 @@ const InnovativeRoadSigns = () => {
               viewport={{ once: true }}
               className="text-white text-[24px] font-medium leading-[122%] tracking-[3.2px] uppercase xl:text-[40px]"
             >
-              Інноваційне дорожнє табло RSD-Radar
+              {t("title")}
             </motion.h2>
 
             <ul className="mt-[48px] xl:mt-[90px] grid grid-cols-1 gap-[48px] xl:gap-[70px] sm:grid-cols-2 xl:flex xxl:flex xxl:gap-[70px]">
-              {[
-                {
-                  title: "Розроблений відповідно потребам вашої громади",
-                  desc: "Для забезпечення безпеки дорожнього руху. Допоможе Вам підвищити безпеку дорожнього руху на дорогах",
-                  width: "xxl:w-[311px]",
-                },
-                {
-                  title: "Дотримання встановленої швидкості",
-                  desc: "Спонукає та заохочує водія дотримуватись встановленої швидкості",
-                  width: "xxl:w-[207px]",
-                },
-                {
-                  title: "Формує відповідальність",
-                  desc: "Емоційна комунікація, практично, з усіма мешканцями громади – водії, пасажири, пішоходи. Допомагає формувати відчуття відповідальності в громаді до безпеки дорожнього руху.",
-                  width: "xxl:w-[230px] xl:w-[230px]",
-                },
-                {
-                  title: "Вимірює та транслює швидкість автомобіля",
-                  desc: "Акцентує увагу водія на поточному швидкісному режимі.",
-                  width: "xxl:w-[199px]",
-                },
-              ].map((item, index) => (
+              {features.map((item, index) => (
                 <motion.li
                   key={index}
                   custom={index + 1}

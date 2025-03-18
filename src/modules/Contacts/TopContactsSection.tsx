@@ -2,9 +2,12 @@
 import ContactForm from "@/shared/components/ContactForm/ContactForm";
 import React from "react";
 import { motion } from "framer-motion";
-import { easeOutAnimation } from "@/shared/utils/animation";
+import { easeOutAnimation } from "@/shared/utils/animation/animation";
+import { useTranslations } from "next-intl";
 
 const TopContactsSection = () => {
+  const t = useTranslations("TopContactsSection");
+
   return (
     <section
       id="contacts"
@@ -19,7 +22,7 @@ const TopContactsSection = () => {
           viewport={{ once: true }}
           className="text-dark text-[18px] font-medium uppercase tracking-[3.2px] xl:text-[36px]"
         >
-          Маєте запитання щодо RSD Radar?
+          {t("title")}
         </motion.h2>
 
         <motion.p
@@ -30,9 +33,7 @@ const TopContactsSection = () => {
           viewport={{ once: true }}
           className="mt-[16px] text-[14px] text-dark font-light xl:text-[18px]"
         >
-          Залиште свої контакти, і наші менеджери зв’яжуться з вами у
-          найкоротший час, щоб допомогти з вибором, дати консультацію або
-          прийняти замовлення.
+          {t("description")}
         </motion.p>
 
         <motion.div

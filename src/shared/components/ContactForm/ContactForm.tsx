@@ -8,6 +8,7 @@ import Button from "../Button/Button";
 import { IContactFormProps, IFormData } from "@/shared/types";
 import Modal from "../Modal/Modal";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const ContactForm = ({
   variant = "black",
@@ -15,18 +16,19 @@ const ContactForm = ({
   formClassName,
 }: IContactFormProps) => {
   const [isThanksOpen, setIsThanksOpen] = useState(false);
+  const t = useTranslations("ContactForm");
 
   const schema = yup.object().shape({
     name: yup
       .string()
-      .required("Вкажіть ваше ім’я")
-      .min(2, "Ім’я має містити щонайменше 2 символи"),
+      .required(t("fields.name.errors.required"))
+      .min(2, t("fields.name.errors.minLength")),
     phone: yup
       .string()
-      .required("Номер телефону є обов’язковим")
+      .required(t("fields.phone.errors.required"))
       .matches(
         /^\+38 \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
-        "Номер телефону має бути у форматі +380XXXXXXXXX (9 цифр після +380)"
+        t("fields.phone.errors.invalidFormat")
       ),
   });
 
@@ -43,22 +45,38 @@ const ContactForm = ({
     },
   });
 
-  const onFormSubmit = (data: IFormData) => {
-    console.log("submited:", data);
-    setIsThanksOpen(true);
-    if (onSubmit) {
-      onSubmit(data);
+  const onFormSubmit = async (data: IFormData) => {
+    console.log("submitted:", data);
+    try {
+      const response = await fetch("/api/send-to-telegram", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+
+      if (response.ok) {
+        setIsThanksOpen(true);
+        if (onSubmit) {
+          onSubmit();
+        }
+      }
+      reset();
+    } catch (error) {
+      console.error("Error sending to Telegram:", error);
+      alert("Сталася помилка при відправці заявки.");
     }
-    reset();
   };
 
   const formClasses = clsx(
     "mt-8",
-    variant === "white" ? "bg-white " : "bg-black"
+    variant === "white" ? "bg-white" : "bg-black"
   );
 
   const inputClasses = clsx(
-    `py-[13px] px-4 rounded-[4px] border-[2px] text-[14px] font-raleway placeholder:font-raleway leading-[20px] `,
+    `py-[13px] px-4 rounded-[4px] border-[2px] text-[14px] font-raleway placeholder:font-raleway leading-[20px]`,
     variant === "white"
       ? "bg-white border-dark text-dark placeholder:text-dark"
       : "bg-black border-white text-white placeholder:text-white"
@@ -73,7 +91,7 @@ const ContactForm = ({
         <input
           {...register("name")}
           type="text"
-          placeholder="Ім’я"
+          placeholder={t("fields.name.placeholder")}
           className={inputClasses}
         />
         {errors.name && (
@@ -85,7 +103,7 @@ const ContactForm = ({
           replacement={{ _: /\d/ }}
           showMask={false}
           {...register("phone")}
-          placeholder="Номер телефону"
+          placeholder={t("fields.phone.placeholder")}
           className={clsx("mt-4", inputClasses)}
         />
         {errors.phone && (
@@ -94,17 +112,17 @@ const ContactForm = ({
 
         <Button
           className="h-[47px] mt-5"
-          text="Надіслати"
+          text={t("button")}
           type="submit"
           variant={variant === "white" ? "black" : "white"}
         />
       </form>
       <Modal isOpen={isThanksOpen} onClose={() => setIsThanksOpen(false)}>
         <h2 className="text-white text-center text-[24px] font-extrabold uppercase">
-          Дякуємо за відповідь!
+          {t("modal.title")}
         </h2>
         <p className="mt-[20px] max-w-[256px] flex justify-center mx-auto text-center text-white text-[18px] font-light">
-          Найближчим часом менеджер зв’яжеться з Вами!
+          {t("modal.description")}
         </p>
       </Modal>
     </>

@@ -1,0 +1,278 @@
+{
+  "Header": {
+    "ourAdvantages": "Advantages",
+    "aboutUs": "About",
+    "products": "Products",
+    "directions": "Directions",
+    "actionButton": "Get a consultation"
+  },
+  "Hero": {
+    "description": "Innovations for Enhancing Road Safety in Your Community."
+  },
+  "InnovativeRoadSigns": {
+    "title": "Innovative RSD-Radar Road Sign",
+    "features": {
+      "feature1": {
+        "title": "Designed to meet your community's needs",
+        "desc": "For ensuring road safety. Helps you enhance road traffic safety on the roads."
+      },
+      "feature2": {
+        "title": "Speed limit compliance",
+        "desc": "Encourages and motivates drivers to adhere to the established speed limit."
+      },
+      "feature3": {
+        "title": "Fosters responsibility",
+        "desc": "Emotional communication with practically all community members – drivers, passengers, pedestrians. Helps cultivate a sense of responsibility within the community toward road safety."
+      },
+      "feature4": {
+        "title": "Measures and displays vehicle speed",
+        "desc": "Draws the driver's attention to the current speed limit."
+      }
+    }
+  },
+  "Advantages": {
+    "title": "RSD Radar",
+    "subtitle": "Our Advantages",
+    "madeIn": "Made in Ukraine",
+    "service": "Warranty and service",
+    "features": {
+      "feature1": {
+        "title": "Emotional Interaction",
+        "desc": "Unique emotional interaction"
+      },
+      "feature2": {
+        "title": "Modern LED displays with high image quality",
+        "desc": "Interactive, dynamic, clear, and understandable emotional messages to the driver regarding their vehicle’s speed"
+      },
+      "feature3": {
+        "title": "Largest screen size",
+        "desc": "The largest screen size available on the market - 1280 x 640mm"
+      },
+      "feature4": {
+        "title": "Ease of installation and connection",
+        "desc": ""
+      }
+    }
+  },
+  "TopContactsSection": {
+    "title": "Have questions about RSD Radar?",
+    "description": "Leave your contact details, and our managers will reach out to you as soon as possible to assist with your choice, provide consultation, or take your order."
+  },
+  "ContactForm": {
+    "fields": {
+      "name": {
+        "placeholder": "Name",
+        "errors": {
+          "required": "Please enter your name",
+          "minLength": "Name must be at least 2 characters long"
+        }
+      },
+      "phone": {
+        "placeholder": "Phone number",
+        "errors": {
+          "required": "Phone number is required",
+          "invalidFormat": "Phone number must be in the format +380XXXXXXXXX (9 digits after +380)"
+        }
+      }
+    },
+    "button": "Submit",
+    "modal": {
+      "title": "Thank you for your response!",
+      "description": "Our manager will contact you shortly!"
+    }
+  },
+  "ContactsModal": {
+    "consultation": {
+      "title": "Get a quick and detailed consultation",
+      "description": "Leave your contact details, and our managers will reach out to you as soon as possible to assist with your choice."
+    },
+    "thanks": {
+      "title": "Thank you for your response!",
+      "description": "Our manager will contact you shortly!"
+    }
+  },
+  "RadarsModels": {
+    "title": "RSD RADAR Models",
+    "items": {
+      "standard": {
+        "title": "RSD Radar Standard",
+        "subtitle": "",
+        "slug": "rsd-radar-standard"
+      },
+      "plus": {
+        "title": "RSD Radar Plus",
+        "subtitle": "Network connectivity. Statistical data collection. Remote reconfiguration, calibration, and software updates.",
+        "slug": "rsd-radar-plus"
+      },
+      "business": {
+        "title": "RSD RADAR BUSINESS",
+        "subtitle": "Custom settings tailored to your business needs. Access roads to gas stations, hotels, shops, etc.",
+        "slug": "rsd-radar-for-business"
+      },
+      "individual": {
+        "title": "RSD RADAR INDIVIDUAL",
+        "subtitle": "Custom settings for any speed restrictions. Cottage communities, university campuses, parks, other pedestrian zones, and recreation areas.",
+        "slug": "rsd-radar-individual"
+      }
+    }
+  },
+  "RadarListItem": {
+    "orderButton": "Order",
+    "moreButton": "Learn More"
+  },
+  "DirectionsOfUse": {
+    "title": "Directions of Use for RSD Radar",
+    "items": {
+      "entry": {
+        "title": "Entry to a Safe Community",
+        "text": "Installed at the entrance to a populated area. Encourages drivers to reduce speed to a safe 50 km/h."
+      },
+      "school": {
+        "title": "Safe Route to School",
+        "text": "Installed on roads near schools, kindergartens, and hospitals."
+      },
+      "danger": {
+        "title": "Accident-Prone Road Section",
+        "text": "Installed on sections with high accident rates."
+      },
+      "crossroad": {
+        "title": "Safe Intersection",
+        "text": "Installed before accident-prone intersections."
+      },
+      "pedestrian": {
+        "title": "Safe Pedestrian Zone",
+        "text": "Installed at entrances to pedestrian zones (cottage communities, university campuses, parks, etc.)."
+      },
+      "business": {
+        "title": "Business",
+        "text": "Installation of RSD Radar by responsible businesses to enhance road safety in the community."
+      }
+    }
+  },
+  "Footer": {
+    "nav": {
+      "advantages": "Our Advantages",
+      "about": "About Us",
+      "products": "Products",
+      "directions": "Directions"
+    },
+    "contacts": {
+      "phone": "Tel.:",
+      "email": "Email: info@mysite.ua",
+      "address": {
+        "street": "Khreshchatyk St, 22",
+        "city": "Kyiv, 01001, Ukraine"
+      }
+    },
+    "copyright": "© 2025 RSD Radar",
+    "developedBy": "Website developed by"
+  },
+  "RadarInfoPage": {
+    "warranty": "1-year warranty.",
+    "madeInUkraine": "Made in Ukraine",
+    "orderButton": "Order",
+    "description": "Modern LED displays with high image quality. Enhances emotional response to speed with color. Provides clear and understandable messages to the driver regarding their vehicle’s speed and the established safe speed.",
+    "items": {
+      "standard": {
+        "title": "RSD Radar Standard",
+        "subtitle": "",
+        "slug": "rsd-radar-standard"
+      },
+      "plus": {
+        "title": "RSD Radar Plus",
+        "subtitle": "Network connectivity. Statistical data collection. Remote reconfiguration, calibration, and software updates.",
+        "slug": "rsd-radar-plus"
+      },
+      "business": {
+        "title": "RSD RADAR BUSINESS",
+        "subtitle": "Custom settings tailored to your business needs. Access roads to gas stations, hotels, shops, etc.",
+        "slug": "rsd-radar-for-business"
+      },
+      "individual": {
+        "title": "RSD RADAR INDIVIDUAL",
+        "subtitle": "Custom settings for any speed restrictions. Cottage communities, university campuses, parks, other pedestrian zones, and recreation areas.",
+        "slug": "rsd-radar-individual"
+      }
+    },
+    "standardPrice": {
+      "label": "Price",
+      "value": "10.00 ₴ excl. VAT"
+    },
+    "location": {
+      "title": "Placement of RSD Radar for Effective Use",
+      "items": [
+        "Installed on the right side of the road – in the direction of traffic.",
+        "Mounted at a height of at least 2.5 meters above the road surface."
+      ]
+    },
+    "installation": {
+      "title": "Installation",
+      "description": [
+        "The kit includes standard mounting brackets. RSD RADAR is easily installed on existing poles (e.g., lighting or power grid poles) using standard mounting brackets.",
+        "To connect, simply attach the device to a constant power source."
+      ]
+    },
+    "screenSpecs": {
+      "title": "Screen Specifications",
+      "data": [
+        { "label": "Brightness", "value": "5000 cd/m²" },
+        { "label": "Viewing Angle", "value": "140/120" },
+        { "label": "Number of Shades (million)", "value": "16.7" },
+        { "label": "Operating Temperature Range", "value": "30" },
+        { "label": "Protection Class (IP)", "value": "65" },
+        { "label": "Average Power Consumption", "value": "~350-400 W/m²" },
+        { "label": "Total Product Weight", "value": "~24 kg" }
+      ]
+    },
+    "radarSpecs": {
+      "title": "Radar Specifications",
+      "data": [
+        { "label": "Speed Control Module", "value": "-24 GHz" },
+        { "label": "Transmission Frequency", "value": "24.075~24.075 GHz" },
+        { "label": "Operating Voltage", "value": "9~24 V" },
+        { "label": "Operating Current", "value": "50 mA at 12V" },
+        { "label": "Operating Temperature", "value": "-45~+85 °C" },
+        { "label": "Speed Measurement Range", "value": "1~240 km/h" },
+        { "label": "Measurement Accuracy", "value": "less than +1 km/h" },
+        { "label": "Detection Distance", "value": ">150 meters" },
+        { "label": "Beam Angle", "value": "44° horizontal/16° vertical" },
+        {
+          "label": "Output",
+          "value": "RS485 and UART serial port (3.3V TTL level signal), data output format speed (baud rate 9600 bps, 9 bytes per frame data packet) illustrated."
+        }
+      ]
+    }
+  },
+  "AdditionalPlus": {
+    "title1": "Model based on RSD RADAR STANDARD with additional functionality.",
+    "title2": "RSD RADAR PLUS is equipped with network connectivity, enabling:",
+    "features": [
+      "remote software updates and device calibration;",
+      "collection and analysis of traffic data;",
+      "display of warnings about hazardous weather conditions and more."
+    ],
+    "notes": [
+      "Additional custom options available according to your needs.",
+      "Configuration and cost are tailored and calculated for each individual order.",
+      "RSD RADAR PLUS includes a subscription fee, the amount of which depends on the configuration."
+    ]
+  },
+  "AdditionalBusiness": {
+    "title": "RSD RADAR BUSINESS",
+    "subtitle": "is manufactured based on RSD RADAR STANDARD.",
+    "features": [
+      "Custom settings and additional functional capabilities tailored to the needs of your business or community.",
+      "For example, approaches to gas stations, hotels, shops, business centers, etc.",
+      "RSD RADAR BUSINESS may include a subscription fee depending on the additional functional capabilities installed."
+    ]
+  },
+  "AdditionalIndividual": {
+    "title": "RSD RADAR INDIVIDUAL",
+    "subtitle": "is manufactured based on RSD RADAR STANDARD.",
+    "features": [
+      "Custom settings and additional functional capabilities for any speed restrictions.",
+      "Pedestrian zones, recreation areas, cottage communities, university campuses, parks…",
+      "RSD RADAR INDIVIDUAL may include a subscription fee depending on the additional functional capabilities installed."
+    ]
+  }
+}

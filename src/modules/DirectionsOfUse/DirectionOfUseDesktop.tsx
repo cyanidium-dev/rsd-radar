@@ -2,11 +2,16 @@
 import Image from "next/image";
 import React from "react";
 import DirectionItem from "./DirectionItem";
-import { directionData } from "@/shared/constants";
 import { motion } from "framer-motion";
-import { easeOutAnimation } from "@/shared/utils/animation";
+import { easeOutAnimation } from "@/shared/utils/animation/animation";
+import { useTranslations } from "next-intl";
+import { IDirectionData } from "@/shared/types";
 
 const DirectionOfUseDesktop = () => {
+  const t = useTranslations("DirectionsOfUse");
+
+  const directionData = Object.values(t.raw("items")) as IDirectionData[];
+
   return (
     <div className="flex items-center w-full">
       <motion.div
@@ -33,7 +38,7 @@ const DirectionOfUseDesktop = () => {
           viewport={{ once: true }}
           className="text-[40px] text-dark font-medium uppercase leading-[122%] tracking-[3.2px] mb-[32px] text-left"
         >
-          Напрямки використання RSD Radar
+          {t("title")}
         </motion.h2>
         <div className="flex">
           <div>

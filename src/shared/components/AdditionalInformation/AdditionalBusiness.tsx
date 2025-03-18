@@ -1,7 +1,10 @@
-import { easeOutAnimation } from "@/shared/utils/animation";
+import { easeOutAnimation } from "@/shared/utils/animation/animation";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const AdditionalBusiness = () => {
+  const t = useTranslations("AdditionalBusiness");
+
   return (
     <div className="mt-[70px]">
       <motion.h4
@@ -12,15 +15,11 @@ const AdditionalBusiness = () => {
         viewport={{ once: true }}
         className="text-[24px] flex flex-col mt-[20px] xl:mt-[40px] xl:text-[32px] max-w-[800px] font-extrabold uppercase text-dark"
       >
-        RSD RADAR БІЗНЕС <span>виробляється на базі RSD RADAR СТАНДАРТ.</span>
+        {t("title")} <span>{t("subtitle")}</span>
       </motion.h4>
 
-      <ul className=" max-w-[497px] mt-[30px] flex flex-col gap-2">
-        {[
-          "Індивідуальні налаштування та додаткові функціональні можливості, водповідно потребам вашого бізнесу, або вашої громади.",
-          "Наприклад, підїзди до АЗС, готелів, магазинів, бізнес центрів, тощо.",
-          "RSD RADAR БІЗНЕС може включати абонентську плату в залежності від додаткових функціональних можливостей які будуть встановленені.",
-        ].map((item, index) => (
+      <ul className="max-w-[497px] mt-[30px] flex flex-col gap-2">
+        {t.raw("features").map((item: string, index: number) => (
           <motion.li
             key={index}
             custom={index + 1}
@@ -28,13 +27,12 @@ const AdditionalBusiness = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-dark text-[14px] xl:text-[18px] flex  items-center"
+            className="text-dark text-[14px] xl:text-[18px] flex items-center"
           >
             {item}
           </motion.li>
         ))}
       </ul>
-      {/* Текст */}
     </div>
   );
 };

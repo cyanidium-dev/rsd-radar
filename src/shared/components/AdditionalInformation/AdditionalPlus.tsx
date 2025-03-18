@@ -1,8 +1,11 @@
-import { easeOutAnimation } from "@/shared/utils/animation";
+import { easeOutAnimation } from "@/shared/utils/animation/animation";
 import { CircleIcon } from "../../../../public/images/icons";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const AdditionalPlus = () => {
+  const t = useTranslations("AdditionalPlus");
+
   return (
     <div className="mt-[70px]">
       <motion.h4
@@ -13,7 +16,7 @@ const AdditionalPlus = () => {
         viewport={{ once: true }}
         className="text-[24px] mt-[20px] xl:mt-[40px] xl:text-[32px] max-w-[800px] font-extrabold uppercase text-dark"
       >
-        Модель на базі RSD RADAR СТАНДАРТ з додатковим функціоналом.{" "}
+        {t("title1")}
       </motion.h4>
       <motion.h4
         custom={2}
@@ -23,16 +26,12 @@ const AdditionalPlus = () => {
         viewport={{ once: true }}
         className="text-[24px] mt-[20px] xl:mt-[40px] xl:text-[32px] max-w-[500px] font-extrabold uppercase text-dark"
       >
-        RSD RADAR ПЛЮС забезпечений зв’язком з мережею, що дозволяє:
+        {t("title2")}
       </motion.h4>
       <div className="sm:flex sm:mt-[40px] sm:justify-between sm:items-start">
         <div className="mt-[70px] sm:mt-0 sm:max-w-[250px] md:max-w-[330px] xl:max-w-[497px]">
           <ul className="flex flex-col gap-[18px] mt-[18px] sm:mt-0">
-            {[
-              "здійснювати віддалене оновлення ПЗ та калібровку пристрою;",
-              "здійснювати збір та аналіз даних про трафік;",
-              "виводити на пристрій попередження про небезпечні погодні умови та інше.",
-            ].map((item, index) => (
+            {t.raw("features").map((item: string, index: number) => (
               <motion.li
                 key={index}
                 custom={index + 3}
@@ -50,13 +49,8 @@ const AdditionalPlus = () => {
             ))}
           </ul>
         </div>
-        {/* Текст */}
         <div className="text-dark mt-[20px] sm:mt-0 text-[14px] xl:text-[18px] flex-col flex gap-1 sm:max-w-[300px] lg:max-w-[400px] xl:max-w-[500px] xxl:max-w-[600px]">
-          {[
-            "Можливі додаткові індивідуальні опції відповідно вашим потребам.",
-            "Комплектація та вартість підбирається та розраховується під кожне окреме замовлення.",
-            "RSD RADAR ПЛЮС включає абонентську плату, розмір якої залежить від комплектації.",
-          ].map((item, index) => (
+          {t.raw("notes").map((item: string, index: number) => (
             <motion.p
               key={index}
               custom={index + 6}

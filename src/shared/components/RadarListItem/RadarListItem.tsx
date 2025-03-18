@@ -1,6 +1,7 @@
 "use client";
 import { IRadarListItemProps } from "@/shared/types";
 import Button from "../Button/Button";
+import { useTranslations } from "next-intl";
 
 const RadarListItem = ({
   title,
@@ -9,6 +10,8 @@ const RadarListItem = ({
   onMore,
   className,
 }: IRadarListItemProps) => {
+  const t = useTranslations("RadarListItem");
+
   return (
     <div
       className={`bg-inherit px-5 py-8 rounded-[8px] border-[2px] border-white flex flex-col gap-6 h-full justify-between w-full ${className}`}
@@ -26,12 +29,12 @@ const RadarListItem = ({
           onClick={onOrder}
           className="h-[40px] !text-[18px]"
           variant="white"
-          text="Замовити"
+          text={t("orderButton")}
         />
         <Button
           onClick={onMore}
           className="h-[40px] !text-[18px] border-[1px] border-white shadow-none"
-          text="Дізнатись більше"
+          text={t("moreButton")}
         />
       </div>
     </div>

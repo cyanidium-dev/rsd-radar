@@ -1,26 +1,49 @@
 "use client";
 import ContactsModal from "@/modules/ContactsModal/ContactsModal";
 import Button from "@/shared/components/Button/Button";
-import { radarData, radarItems, screenData } from "@/shared/constants";
-import { RadarPageProps } from "@/shared/types";
+import { IPrice, IRowData, RadarItem, RadarPageProps } from "@/shared/types";
 import Image from "next/image";
-import React, { useState } from "react";
-import { CircleIcon } from "../../../public/images/icons";
+import React, { useEffect, useState } from "react";
+import { CircleIcon } from "../../../../public/images/icons";
 import { Table } from "@/shared/components/Table/Table";
 import { motion } from "framer-motion";
-import { easeOutAnimation } from "@/shared/utils/animation";
+import { easeOutAnimation } from "@/shared/utils/animation/animation";
 import AdditionalPlus from "@/shared/components/AdditionalInformation/AdditionalPlus";
 import AdditionalBusiness from "@/shared/components/AdditionalInformation/AdditionalBusiness";
 import AdditionalIndividual from "@/shared/components/AdditionalInformation/AdditionalIndividual";
+import { useFormatter, useTranslations } from "next-intl";
+import { fetchSiteData } from "@/shared/utils/dotacms";
+import { usePathname } from "next/navigation";
 
 export default function RadarInfoPage({ params }: RadarPageProps) {
   const { slug } = React.use(params);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [price, setPrice] = useState<null | IPrice>(null);
+  const pathName = usePathname();
+  const lang = pathName.split("/")[1];
+  const format = useFormatter();
 
+  useEffect(() => {
+    const fetchPrice = async () => {
+      try {
+        const { price } = await fetchSiteData();
+        setPrice(price);
+      } catch (error) {
+        console.error("Error fetching price:", error);
+      }
+    };
+    fetchPrice();
+  }, []);
+  const t = useTranslations("RadarInfoPage");
+  const radarItems = Object.values(t.raw("items")) as RadarItem[];
   const currentRadar = radarItems.find((radar) => radar.slug === slug);
+  const screenData = t.raw("screenSpecs.data") as IRowData[];
+  const radarData = t.raw("radarSpecs.data") as IRowData[];
+
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
+
   return (
     <section className="bg-white">
       <div className="radar-bg_hero pt-[86px] pb-[93px] md:py-[53px]">
@@ -36,7 +59,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
           alt="Radar"
           width={420}
           height={463}
-          className="mx-auto w-[420px]  h-[463px] object-contain hidden md:block"
+          className="mx-auto w-[420px] h-[463px] object-contain hidden md:block"
         />
       </div>
 
@@ -46,9 +69,9 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="md:flex md:justify-between gap-[40px] md:items-start "
+          className="md:flex md:justify-between gap-[40px] md:items-start"
         >
-          <div className="flex flex-col gap-[14px]  ">
+          <div className="flex flex-col gap-[14px]">
             <motion.p
               custom={0}
               variants={easeOutAnimation}
@@ -57,7 +80,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
               viewport={{ once: true }}
               className="text-[20px] xl:text-[24px] text-dark xl:hidden"
             >
-              Гарантія 1 рік.
+              {t("warranty")}
             </motion.p>
             <motion.h2
               custom={1}
@@ -75,10 +98,10 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex justify-between "
+              className="flex justify-between"
             >
               <p className="text-[20px] xl:text-[24px] text-dark">
-                Вироблено в Україні
+                {t("madeInUkraine")}
               </p>
               <motion.p
                 custom={3}
@@ -88,7 +111,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
                 viewport={{ once: true }}
                 className="text-[20px] xl:text-[24px] text-dark hidden xl:block"
               >
-                Гарантія 1 рік.
+                {t("warranty")}
               </motion.p>
             </motion.div>
             {slug === "rsd-radar-standard" && (
@@ -98,10 +121,30 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="flex justify-between text-[20px] xl:text-[24px] font-bold text-dark max-w-[280px] md:max-w-full"
+                className="flex justify-between gap-[10px] text-[20px] xl:text-[24px] font-bold text-dark max-w-[320px] md:max-w-full"
               >
-                <p>Вартість</p>
-                <span>10,00 ₴ без ПДВ</span>
+                {lang === "uk" && price !== null ? (
+                  <p>Вартість</p>
+                ) : (
+                  <p>Price</p>
+                )}
+                {lang === "uk" && price !== null ? (
+                  <span>
+                    {format.number(price.uahPrice as number, {
+                      style: "currency",
+                      currency: "UAH",
+                    })}{" "}
+                    без ПДВ
+                  </span>
+                ) : (
+                  <span>
+                    {format.number(price?.eurPrice as number, {
+                      style: "currency",
+                      currency: "EUR",
+                    })}{" "}
+                    excl. VAT
+                  </span>
+                )}
               </motion.div>
             )}
             <motion.div
@@ -114,7 +157,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
               <Button
                 onClick={() => setIsModalOpen(true)}
                 className="h-[40px] w-[235px] mt-[14px]"
-                text="Замовити"
+                text={t("orderButton")}
               />
             </motion.div>
           </div>
@@ -124,12 +167,9 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="mt-[42px] md:mt-0 text-[14px]  xl:text-[18px] text-dark font-light md:max-w-[300px]   lg:max-w-[400px] xl:max-w-[500px] xxl:max-w-[600px]"
+            className="mt-[42px] md:mt-0 text-[14px] xl:text-[18px] text-dark font-light md:max-w-[300px] lg:max-w-[400px] xl:max-w-[500px] xxl:max-w-[600px]"
           >
-            Сучасні світлодіодні дисплеї з високою якістю зображення. Підсилює
-            кольором реакцію емоцію на швидкість. Забезпечує чіткі та зрозумілі
-            повідомлення водію, щодо швидкості його автомобіля та встановленої
-            безпечної швидкості.
+            {t("description")}
           </motion.p>
         </motion.div>
         {slug === "rsd-radar-plus" && <AdditionalPlus />}
@@ -151,41 +191,25 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
               viewport={{ once: true }}
               className="text-dark text-[24px] xl:text-[32px] font-extrabold uppercase"
             >
-              Розташування RSD Radar для його ефективного використання
+              {t("location.title")}
             </motion.h2>
             <ul className="flex flex-col gap-[18px] mt-[18px]">
-              <motion.li
-                custom={1}
-                variants={easeOutAnimation}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="text-dark text-[14px] xl:text-[18px] flex gap-[12px] items-center"
-              >
-                <span>
-                  <CircleIcon className="w-[14px] h-[14px]" />
-                </span>
-                <p>
-                  Встановлюється з правого боку дороги – у напрямку до руху.
-                </p>
-              </motion.li>
-
-              <motion.li
-                custom={2}
-                variants={easeOutAnimation}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="text-dark text-[14px] xl:text-[18px] flex gap-[12px] items-center"
-              >
-                <span>
-                  <CircleIcon className="w-[14px] h-[14px]" />
-                </span>
-                <p>
-                  Закріплюється на висоті не менше 2.5 метра над рівнем
-                  дорожнього покриття
-                </p>
-              </motion.li>
+              {t.raw("location.items").map((item: string, index: number) => (
+                <motion.li
+                  key={index}
+                  custom={index + 1}
+                  variants={easeOutAnimation}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="text-dark text-[14px] xl:text-[18px] flex gap-[12px] items-center"
+                >
+                  <span>
+                    <CircleIcon className="w-[14px] h-[14px]" />
+                  </span>
+                  <p>{item}</p>
+                </motion.li>
+              ))}
             </ul>
           </div>
           <div className="flex flex-col gap-[18px] mt-[70px] sm:mt-0 sm:max-w-[300px] lg:max-w-[400px] xl:max-w-[500px] xxl:max-w-[600px]">
@@ -197,7 +221,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
               viewport={{ once: true }}
               className="text-dark text-[24px] xl:text-[32px] font-extrabold uppercase"
             >
-              Монтаж
+              {t("installation.title")}
             </motion.h2>
             <motion.p
               custom={4}
@@ -207,15 +231,11 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
               viewport={{ once: true }}
               className="text-[14px] flex flex-col xl:text-[18px] font-light"
             >
-              <span>
-                В комплект входять стандартні монтажні кріплення. RSD RADAR
-                легко встановлюється на існуючі стовпи (наприклад, освітлення
-                або електромережі) за допомогою стандартних монтажних кріплень.
-              </span>
-              <span>
-                Для підключення достатньо під&apos;єднати пристрій до постійного
-                джерела електроживлення
-              </span>
+              {t
+                .raw("installation.description")
+                .map((line: string, index: number) => (
+                  <span key={index}>{line}</span>
+                ))}
             </motion.p>
           </div>
         </motion.div>
@@ -235,7 +255,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
               viewport={{ once: true }}
               className="text-dark text-[32px] font-extrabold uppercase"
             >
-              Характеристика екрану
+              {t("screenSpecs.title")}
             </motion.h2>
             <motion.div
               custom={1}
@@ -247,7 +267,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
               <Table data={screenData} />
             </motion.div>
           </div>
-          <div className="flex flex-col md:max-w-[300px] lg:max-w-[400px]  gap-[30px] xl:max-w-[491px] 2xl:max-w-[600px]">
+          <div className="flex flex-col md:max-w-[300px] lg:max-w-[400px] gap-[30px] xl:max-w-[491px] 2xl:max-w-[600px]">
             <motion.h2
               custom={2}
               variants={easeOutAnimation}
@@ -256,7 +276,7 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
               viewport={{ once: true }}
               className="text-dark text-[32px] font-extrabold uppercase"
             >
-              Характеристика радару
+              {t("radarSpecs.title")}
             </motion.h2>
             <motion.div
               custom={3}

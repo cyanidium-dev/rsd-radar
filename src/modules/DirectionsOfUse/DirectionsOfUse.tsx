@@ -2,12 +2,16 @@
 import Image from "next/image";
 import React from "react";
 import DirectionItem from "./DirectionItem";
-import { directionData } from "@/shared/constants";
 import DirectionOfUseDesktop from "./DirectionOfUseDesktop";
 import { motion } from "framer-motion";
-import { easeOutAnimation } from "@/shared/utils/animation";
+import { easeOutAnimation } from "@/shared/utils/animation/animation";
+import { IDirectionData } from "@/shared/types";
+import { useTranslations } from "next-intl";
 
 const DirectionsOfUse = () => {
+  const t = useTranslations("DirectionsOfUse");
+
+  const directionData = Object.values(t.raw("items")) as IDirectionData[];
   return (
     <section id="directions" className="bg-white">
       <div className="container mx-auto sm:px-4 md:px-3 lg:px-6 px-6 pt-[128px] pb-[64px] xl:px-[150px]">
@@ -23,7 +27,7 @@ const DirectionsOfUse = () => {
                 viewport={{ once: true }}
                 className="text-[24px] xl:text-[40px] text-dark font-medium uppercase leading-[122%] tracking-[3.2px] md:text-[28px] lg:text-[32px]"
               >
-                Напрямки використання RSD Radar
+                {t("title")}
               </motion.h2>
 
               <div className="mt-[70px] md:mt-[80px] 2xl:mt-[100px]">

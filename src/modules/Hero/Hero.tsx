@@ -2,9 +2,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { easeOutAnimation } from "@/shared/utils/animation";
+import { easeOutAnimation } from "@/shared/utils/animation/animation";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
+  const t = useTranslations("Hero");
+
   return (
     <section className="px-[42px] pt-[84px] pb-[111px] hero-bg xl:pb-[28px] xl:pt-[77px]">
       <div className="flex flex-col justify-center items-center">
@@ -53,7 +56,7 @@ const Hero = () => {
           whileInView="visible"
           className="text-white text-center mx-auto text-[18px] mt-[31px] leading-[122%] tracking-[1.2px] max-w-[238px] self-stretch xl:text-[24px] xl:max-w-[642px]"
         >
-          Іновації для підвищення безпеки дорожнього руху у вашій громаді.
+          {t("description")}
         </motion.p>
       </div>
     </section>

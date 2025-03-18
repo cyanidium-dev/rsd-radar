@@ -10,11 +10,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@datocms/cda-client": "^0.2.6",
     "@hookform/resolvers": "^4.1.2",
     "@react-input/mask": "^2.0.4",
     "clsx": "^2.1.1",
     "framer-motion": "^12.4.7",
     "next": "15.1.7",
+    "next-intl": "^4.0.2",
     "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

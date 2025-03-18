@@ -22,6 +22,7 @@ export type RadarPageProps = {
 
 export interface IBurgerNavigationProps extends React.ComponentProps<"nav"> {
   isOpen: boolean;
+  contacts: IContact[];
   onClose: () => void;
 }
 
@@ -62,7 +63,7 @@ export interface IFormData {
 
 export interface IContactFormProps {
   variant?: "white" | "black";
-  onSubmit?: (data: IFormData) => void;
+  onSubmit?: () => void;
   formClassName?: string;
 }
 
@@ -74,4 +75,51 @@ export interface IRowData {
 export interface ITableProps extends React.ComponentProps<"div"> {
   data: IRowData[];
   variant?: "default" | "radar";
+}
+
+export interface IDirectionData {
+  title: string;
+  text: string;
+}
+
+interface IFeature {
+  title: string;
+  desc: string;
+}
+
+export interface IAdvantagesTranslation {
+  title: string;
+  subtitle: string;
+  madeIn: string;
+  features: {
+    [key: string]: IFeature;
+  };
+}
+
+export interface IRadarItem {
+  title: string;
+  subtitle: string;
+  slug: string;
+}
+
+export interface IContact {
+  id: string;
+  phoneNumber: string;
+}
+
+export interface IPrice {
+  id: string;
+  uahPrice: number;
+  eurPrice: number;
+}
+
+export interface IEmail {
+  id: string;
+  email: string;
+}
+
+export interface IDatoCMSData {
+  contacts: IContact[];
+  price: IPrice;
+  email: IEmail;
 }
