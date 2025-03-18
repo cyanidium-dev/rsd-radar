@@ -24,7 +24,7 @@ const Header = ({ contacts }: { contacts: IContact[] }) => {
           <Link className="logo" href="/">
             RSD Radar
           </Link>
-          <div className=" gap-[20px] 2xl:gap-[40px] items-center hidden xl:flex">
+          <div className=" gap-[20px] 2xl:gap-[40px] items-center hidden xl:flex ml-auto mr-[10px] 2xl:mr-[40px] xxl:mr-[90px]">
             <div className="flex gap-[20px] 2xl:gap-[40px] items-center">
               <div className="flex gap-3">
                 <ViberIcon color="#18181B" />
