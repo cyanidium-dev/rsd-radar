@@ -7,10 +7,11 @@ import { NextIntlClientProvider } from "next-intl";
 import { fetchSiteData } from "@/shared/utils/dotacms";
 
 export async function generateMetadata(props: {
-  params: Promise<{ locale?: "uk" | "en" }>;
+  params: Promise<{ locale?: "en" | "uk" }>;
 }): Promise<Metadata> {
   const { params } = props;
   const { locale = "uk" } = await params;
+  console.log("Locale in generateMetadata:", locale);
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL || "https://rsd-radar.vercel.app";
 
@@ -19,6 +20,7 @@ export async function generateMetadata(props: {
     openGraph: {
       type: "website",
       url: baseUrl,
+      locale: locale === "en" ? "en_US" : "uk_UA",
       images: [
         {
           url: "/images/bot-contacts/radar-desk.webp",
@@ -49,6 +51,11 @@ export async function generateMetadata(props: {
         template: `%s | RSD Radar`,
       },
       description,
+      openGraph: {
+        ...defaultMetadata.openGraph,
+        title: defaultTitle,
+        description,
+      },
     };
   }
 
@@ -70,6 +77,11 @@ export async function generateMetadata(props: {
       template: `%s | RSD Radar`,
     },
     description,
+    openGraph: {
+      ...defaultMetadata.openGraph,
+      title: defaultTitle,
+      description,
+    },
   };
 }
 const montserrat = Montserrat({
