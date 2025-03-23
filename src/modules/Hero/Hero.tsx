@@ -9,7 +9,7 @@ const Hero = () => {
   const t = useTranslations("Hero");
 
   return (
-    <section className="px-[42px] pt-[84px] pb-[111px] hero-bg xl:pb-[28px] xl:pt-[77px]">
+    <section className="px-[42px] pt-[0px] pb-[111px] hero-bg xl:pb-[28px] xl:pt-[77px]">
       <div className="flex flex-col justify-center items-center">
         <Image
           src="/images/hero/radar-mob.webp"
@@ -22,8 +22,8 @@ const Hero = () => {
           alt="Radar"
           className="hidden xl:block"
           src="/images/hero/radar-desk.webp"
-          width={420}
-          height={863}
+          width={280}
+          height={575}
         />
 
         <motion.h1
@@ -32,7 +32,7 @@ const Hero = () => {
           variants={easeOutAnimation}
           initial="hidden"
           whileInView="visible"
-          className="mt-[31px] text-white text-[36px] font-extrabold leading-[150%] text-center tracking-[4.12px] uppercase xl:text-[64px] xl:mt-[82px]"
+          className=" text-white text-[36px] font-extrabold leading-[150%] text-center tracking-[4.12px] uppercase xl:text-[64px] mt-10"
         >
           RSD Radar
         </motion.h1>
