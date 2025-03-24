@@ -9,10 +9,10 @@ const InnovativeRoadSigns = () => {
   const t = useTranslations("InnovativeRoadSigns");
 
   const featuresWidth = [
-    "xxl:w-[311px]",
-    "xxl:w-[207px]",
-    "xxl:w-[230px] xl:w-[230px]",
-    "xxl:w-[199px]",
+    "xxl:w-[311px] xl:w-[220px]",
+    "xxl:w-[207px] xl:w-[170px]",
+    "xxl:w-[230px] xl:w-[210px]",
+    "xxl:w-[199px] xl:w-[140px]",
   ];
 
   const features = Object.values(t.raw("features")).map(
@@ -26,21 +26,21 @@ const InnovativeRoadSigns = () => {
 
   return (
     <section id="about-us">
-      <div className="container px-6 md:px-8 mx-auto pt-[128px] pb-[50px] xl:pl-[150px] xxl:pr-[150px] bg-dark">
-        <div className="xxl:flex xxl:justify-between xxl:items-center">
-          <div className="xxl:flex xxl:flex-col">
+      <div className="container px-6 md:px-8 mx-auto pt-[80px] pb-[40px] xl:pl-[80px] xl:pr-[80px] xxl:pl-[150px] xxl:pr-[150px] bg-dark">
+        <div className="xl:flex xl:justify-between xl:items-center xxl:flex xxl:justify-between xxl:items-center">
+          <div className="xl:flex xl:flex-col xxl:flex xxl:flex-col">
             <motion.h2
               custom={0}
               variants={easeOutAnimation}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-white text-[24px] font-medium leading-[122%] tracking-[3.2px] uppercase xl:text-[40px]"
+              className="text-white text-[24px] font-medium leading-[122%] tracking-[3.2px] uppercase xl:text-[32px] xxl:text-[40px]"
             >
               {t("title")}
             </motion.h2>
 
-            <ul className="mt-[48px] xl:mt-[90px] grid grid-cols-1 gap-[48px] xl:gap-[70px] sm:grid-cols-2 xl:flex xxl:flex xxl:gap-[70px]">
+            <ul className="mt-[48px] xl:mt-[60px] xxl:mt-[90px] grid grid-cols-1 gap-[48px] sm:grid-cols-2 xl:flex xl:gap-[50px] xxl:flex xxl:gap-[70px]">
               {features.map((item, index) => (
                 <motion.li
                   key={index}
@@ -52,12 +52,12 @@ const InnovativeRoadSigns = () => {
                   className="flex flex-col gap-4"
                 >
                   <h3
-                    className={`text-white text-[18px] md:max-w-[328px] xl:text-[24px] self-stretch font-medium leading-[122%] tracking-[1.92px] ${item.width}`}
+                    className={`text-white text-[18px] xl:text-[20px] xxl:text-[24px] self-stretch font-medium leading-[122%] tracking-[1.92px] ${item.width}`}
                   >
                     {item.title}
                   </h3>
                   <p
-                    className={`text-white text-[14px] xl:text-[18px] font-light ${item.width}`}
+                    className={`text-white text-[14px] xl:text-[16px] xxl:text-[18px] font-light ${item.width}`}
                   >
                     {item.desc}
                   </p>
@@ -75,10 +75,10 @@ const InnovativeRoadSigns = () => {
               <Image
                 src="/images/innovative/radar-desk.webp"
                 alt="Radar"
-                width={420}
-                height={863}
+                width={350}
+                height={720}
                 quality={100}
-                className="hidden h-[863px] object-contain  xxl:block"
+                className="hidden h-[720px] xl:w-[250px] xl:h-[520px] object-contain xl:block xxl:h-[863px] xxl:w-[420px]"
               />
             </motion.div>
             <motion.div
@@ -92,7 +92,7 @@ const InnovativeRoadSigns = () => {
                 alt="Radar"
                 width={229}
                 height={470}
-                className="mt-[48px] h-[470px] object-contain  mx-auto xxl:hidden"
+                className="mt-[48px] h-[470px] object-contain mx-auto xl:hidden"
               />
             </motion.div>
           </div>

@@ -33,7 +33,7 @@ const Header = ({ contacts }: { contacts: IContact[] }) => {
               <div className="flex flex-col">
                 {contacts.map((contact, index) => (
                   <a
-                    className="text-[12px] text-dark hover:text-dark/70 transition-colors duration-300"
+                    className="text-[16px] text-dark hover:text-dark/70 transition-colors duration-300"
                     key={index}
                     href="tel:{contact.phoneNumber}"
                   >

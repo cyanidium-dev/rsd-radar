@@ -19,7 +19,7 @@ const Navigation = ({ className, ...props }: React.ComponentProps<"nav">) => {
 
   return (
     <nav
-      className={clsx(className, "flex gap-[19px] 2xl:gap-[29px]")}
+      className={clsx(className, "flex gap-[10px] 2xl:gap-[29px]")}
       {...props}
     >
       {navLinks.map((link, index) => (
