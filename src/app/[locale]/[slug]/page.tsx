@@ -46,21 +46,25 @@ export default function RadarInfoPage({ params }: RadarPageProps) {
 
   return (
     <section className="bg-white">
-      <div className="radar-bg_hero pt-[86px] pb-[93px] md:py-[53px]">
-        <Image
-          src="/images/hero/radar-mob.webp"
-          alt="Radar"
-          width={229}
-          height={470}
-          className="mx-auto w-[229px] h-[470px] object-contain md:hidden"
-        />
-        <Image
-          src="/images/hero/radar-desk.webp"
-          alt="Radar"
-          width={420}
-          height={463}
-          className="mx-auto w-[420px] h-[463px] object-contain hidden md:block"
-        />
+      <div className="radar-bg_hero pt-[20px] pb-[20px] md:pt-[30px] md:pb-[30px] h-[calc(70svh-72px)] md:h-[calc(70svh-88px)] flex items-center justify-center overflow-y-auto">
+        <div className="relative w-full h-[40vh] md:h-[45vh] xl:h-[50vh] flex items-center justify-center">
+          <Image
+            src="/images/hero/radar-mob.webp"
+            alt="Radar"
+            fill
+            className="md:hidden object-contain"
+            sizes="(max-width: 768px) 229px, 420px"
+            priority
+          />
+          <Image
+            src="/images/hero/radar-desk.webp"
+            alt="Radar"
+            fill
+            className="hidden md:block object-contain"
+            sizes="(min-width: 768px) 420px, 229px"
+            priority
+          />
+        </div>
       </div>
 
       <div className="container mx-auto px-[24px] pt-[70px] pb-[128px] xl:px-[150px]">

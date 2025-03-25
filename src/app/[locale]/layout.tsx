@@ -11,7 +11,6 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const { params } = props;
   const { locale = "uk" } = await params;
-  console.log("Locale in generateMetadata:", locale);
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL || "https://rsd-radar.vercel.app";
 
